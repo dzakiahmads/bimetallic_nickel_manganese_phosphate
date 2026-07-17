@@ -1,0 +1,45 @@
+    pseudo_dir 	= '/home/praktikum/PSEUDO'
+    disk_io 	= 'none'
+    tprnfor 	= .true.
+    dipfield      = .TRUE.
+    tefield       = .TRUE.
+/
+
+&SYSTEM
+    degauss                   = 0.01
+    ecutrho                   = 500
+    ecutwfc                   = 50
+    ibrav                     = 0
+    nat                       = 158
+    ntyp                      = 4
+    occupations               = "smearing"
+    smearing                  = "gaussian"
+    nspin                     = 2
+    starting_magnetization(1) = 1
+    starting_magnetization(2) = 1
+    starting_magnetization(3) = 1
+    edir                      = 3
+    vdw_corr                  = 'DFT-D'
+    eamp                      = 0.0
+    emaxpos                   = 0.75
+/
+
+&ELECTRONS
+    electron_maxstep = 150
+    mixing_beta      = 0.2
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+    scf_must_converge= .FALSE.
+/
+
+&IONS
+ ion_dynamics = 'bfgs'
+/
+
+ATOMIC_SPECIES
+Ni   58.69340  Ni.pbe-n-rrkjus_psl.1.0.0.UPF
+P    30.97376  P.pbe-n-rrkjus_psl.1.0.0.UPF
+O    15.99940  O.pbe-rrkjus.UPF
+H     1.00794  H.pbe-rrkjus.UPF
+
+ATOMIC_POSITIONS (angstrom)

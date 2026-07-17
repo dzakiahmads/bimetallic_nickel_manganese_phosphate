@@ -1,0 +1,4404 @@
+
+     Program PWSCF v.7.2 starts on 17Nov2025 at 20:37:53 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on    64 processors
+
+     MPI processes distributed on     4 nodes
+     483082 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from PWINPUT_atm158_zm
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+     Presently no symmetry can be used with electric field
+
+     file Ni.pbe-n-rrkjus_psl.1.0.0.UPF: wavefunction(s)  3D renormalized
+     file Mn.pbe-spn-rrkjus_psl.0.3.1.UPF: wavefunction(s)  3D renormalized
+     file O.pbe-rrkjus.UPF: wavefunction(s)  2S renormalized
+     file H.pbe-rrkjus.UPF: wavefunction(s)  1S renormalized
+
+     gamma-point specific algorithms are used
+ 
+     R & G space division:  proc/nbgrp/npool/nimage =      64
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     custom distributed-memory algorithm (size of sub-group:  7*  7 procs)
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         214      85     20                61830    15614    1928
+     Max         216      86     22                61864    15658    1982
+     Sum       13727    5503   1375              3958051  1001255  125211
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      17.8532  a.u.
+     unit-cell volume          =   20962.6682 (a.u.)^3
+     number of atoms/cell      =          158
+     number of atomic types    =            5
+     number of electrons       =      1108.00
+     number of Kohn-Sham states=          665
+     kinetic-energy cutoff     =      50.0000  Ry
+     charge density cutoff     =     500.0000  Ry
+     scf convergence threshold =      1.0E-06
+     mixing beta               =       0.1000
+     number of iterations used =            8  local-TF  mixing
+     Exchange-correlation=  SLA  PW   PBE  PBE
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=  17.853155  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.003237   1.081997   0.000000 )  
+               a(3) = (   0.000000   0.000000   3.404673 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000 -0.002992  0.000000 )  
+               b(2) = (  0.000000  0.924217  0.000000 )  
+               b(3) = (  0.000000  0.000000  0.293714 )  
+
+
+     PseudoPot. # 1 for Ni read from file:
+     ~/PSEUDO/Ni.pbe-n-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: Not computed, couldn't open file
+     Pseudo is Ultrasoft + core correction, Zval = 10.0
+     Generated using "atomic" code by A. Dal Corso  v.5.1.2
+     Using radial grid of 1195 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for Mn read from file:
+     ~/PSEUDO/Mn.pbe-spn-rrkjus_psl.0.3.1.UPF
+     MD5 check sum: Not computed, couldn't open file
+     Pseudo is Ultrasoft + core correction, Zval = 15.0
+     Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.2.2
+     Using radial grid of 1187 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for P  read from file:
+     ~/PSEUDO/P.pbe-n-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: Not computed, couldn't open file
+     Pseudo is Ultrasoft + core correction, Zval =  5.0
+     Generated using "atomic" code by A. Dal Corso  v.5.1
+     Using radial grid of 1147 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 4 for O  read from file:
+     ~/PSEUDO/O.pbe-rrkjus.UPF
+     MD5 check sum: Not computed, couldn't open file
+     Pseudo is Ultrasoft, Zval =  6.0
+     Generated by new atomic code, or converted to UPF format
+     Using radial grid of 1269 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 5 for H  read from file:
+     ~/PSEUDO/H.pbe-rrkjus.UPF
+     MD5 check sum: Not computed, couldn't open file
+     Pseudo is Ultrasoft, Zval =  1.0
+     Generated by new atomic code, or converted to UPF format
+     Using radial grid of 1061 points,  2 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+     Ni               10.00    58.69300     Ni( 1.00)
+     Mn               15.00    54.93800     Mn( 1.00)
+     P                 5.00    30.97300     P ( 1.00)
+     O                 6.00    15.99900     O ( 1.00)
+     H                 1.00     1.00790     H ( 1.00)
+
+     Starting magnetic structure 
+     atomic species   magnetization
+     Ni              1.000
+     Mn              1.000
+     P               1.000
+     O               1.000
+     H               0.000
+
+     No symmetry found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        Ni     tau(   1) = (   0.2448189   0.8359134   0.1216996  )
+         2        Ni     tau(   2) = (   0.4920952   0.7731948   0.4438949  )
+         3        Mn     tau(   3) = (   0.0113021   0.2918949   0.1160512  )
+         4        Ni     tau(   4) = (   0.2586115   0.2268566   0.4417628  )
+         5        Ni     tau(   5) = (   1.0019827   1.0705803   0.2835623  )
+         6        Ni     tau(   6) = (   0.2518099   0.5339061   0.2823483  )
+         7        Ni     tau(   7) = (   0.7400999   0.8349186   0.1225624  )
+         8        Mn     tau(   8) = (   0.9886961   0.7700845   0.4492175  )
+         9        Mn     tau(   9) = (   0.5113421   0.2944667   0.1158892  )
+        10        Ni     tau(  10) = (   0.7560857   0.2263843   0.4422798  )
+        11        Ni     tau(  11) = (   0.5009386   1.0712238   0.2822610  )
+        12        Ni     tau(  12) = (   0.7496978   0.5336600   0.2834396  )
+        13        P      tau(  13) = (   0.2147792   0.9686896   0.4382665  )
+        14        P      tau(  14) = (   0.4607377   0.6441916   0.1265334  )
+        15        P      tau(  15) = (   0.2883218   0.0913464   0.1265752  )
+        16        P      tau(  16) = (   0.0408981   0.4221836   0.4354960  )
+        17        O      tau(  17) = (   0.1380864   0.9007819   0.3023220  )
+        18        O      tau(  18) = (   0.3817439   0.7113683   0.2624610  )
+        19        O      tau(  19) = (   0.3638364   0.1608547   0.2624417  )
+        20        O      tau(  20) = (   0.1207568   0.3545755   0.3021219  )
+        21        O      tau(  21) = (   0.1552194   0.8797563   0.5625160  )
+        22        O      tau(  22) = (   0.4022820   0.7317969   0.0010585  )
+        23        O      tau(  23) = (   0.3454844   0.1823965   0.0026336  )
+        24        O      tau(  24) = (   0.1017019   0.3344979   0.5594858  )
+        25        O      tau(  25) = (   0.0970074   0.5770714   0.4346455  )
+        26        O      tau(  26) = (   0.3534166   1.0203677   0.1270707  )
+        27        O      tau(  27) = (   0.3778024   0.4172402   0.4261028  )
+        28        O      tau(  28) = (   0.1256171   0.0954063   0.1372153  )
+        29        O      tau(  29) = (   0.1232168   0.6482422   0.1385172  )
+        30        O      tau(  30) = (   0.4028533   0.4897833   0.1289718  )
+        31        O      tau(  31) = (   0.1511050   0.0405554   0.4369979  )
+        32        O      tau(  32) = (   0.3776556   0.9624293   0.4288159  )
+        33        P      tau(  33) = (   0.7084770   0.9682119   0.4394551  )
+        34        P      tau(  34) = (   0.9603154   0.6409658   0.1292469  )
+        35        P      tau(  35) = (   0.7875734   0.0899770   0.1274098  )
+        36        P      tau(  36) = (   0.5405152   0.4272620   0.4364455  )
+        37        O      tau(  37) = (   0.6323583   0.8977630   0.3036670  )
+        38        O      tau(  38) = (   0.8809646   0.7091921   0.2627111  )
+        39        O      tau(  39) = (   0.8631054   0.1587239   0.2636487  )
+        40        O      tau(  40) = (   0.6202581   0.3578380   0.3034239  )
+        41        O      tau(  41) = (   0.6499160   0.8772596   0.5630912  )
+        42        O      tau(  42) = (   0.8990171   0.7283464   0.0054426  )
+        43        O      tau(  43) = (   0.8448361   0.1806154   0.0030658  )
+        44        O      tau(  44) = (   0.6023096   0.3392612   0.5600469  )
+        45        O      tau(  45) = (   0.5960222   0.5826131   0.4346340  )
+        46        O      tau(  46) = (   0.8515023   1.0184215   0.1281632  )
+        47        O      tau(  47) = (   0.8779640   0.4148900   0.4260983  )
+        48        O      tau(  48) = (   0.6251159   0.0957170   0.1376895  )
+        49        O      tau(  49) = (   0.6237654   0.6481585   0.1378370  )
+        50        O      tau(  50) = (   0.9038046   0.4863338   0.1307354  )
+        51        O      tau(  51) = (   0.6458737   0.0402574   0.4377979  )
+        52        O      tau(  52) = (   0.8712434   0.9635255   0.4285638  )
+        53        Ni     tau(  53) = (   0.2420320   0.8169913   0.7491577  )
+        54        Ni     tau(  54) = (   0.4893084   0.7542727   1.0713530  )
+        55        Mn     tau(  55) = (   0.0085152   0.2729728   0.7435093  )
+        56        Ni     tau(  56) = (   0.2558246   0.2079345   1.0692209  )
+        57        Ni     tau(  57) = (   0.9991959   1.0516583   0.9110204  )
+        58        Ni     tau(  58) = (   0.2490231   0.5149840   0.9098064  )
+        59        Ni     tau(  59) = (   0.7373131   0.8159965   0.7500205  )
+        60        Mn     tau(  60) = (   0.9859093   0.7511625   1.0766756  )
+        61        Mn     tau(  61) = (   0.5085552   0.2755447   0.7433473  )
+        62        Ni     tau(  62) = (   0.7532989   0.2074622   1.0697379  )
+        63        Ni     tau(  63) = (   0.4981517   1.0523018   0.9097191  )
+        64        Ni     tau(  64) = (   0.7469109   0.5147379   0.9108977  )
+        65        P      tau(  65) = (   0.2119924   0.9497675   1.0657246  )
+        66        P      tau(  66) = (   0.4579509   0.6252695   0.7539915  )
+        67        P      tau(  67) = (   0.2855349   0.0724244   0.7540333  )
+        68        P      tau(  68) = (   0.0381112   0.4032615   1.0629541  )
+        69        O      tau(  69) = (   0.1352995   0.8818598   0.9297801  )
+        70        O      tau(  70) = (   0.3789570   0.6924463   0.8899191  )
+        71        O      tau(  71) = (   0.3610496   0.1419327   0.8898998  )
+        72        O      tau(  72) = (   0.1179700   0.3356534   0.9295800  )
+        73        O      tau(  73) = (   0.1524325   0.8608343   1.1899741  )
+        74        O      tau(  74) = (   0.3994952   0.7128748   0.6285166  )
+        75        O      tau(  75) = (   0.3426976   0.1634744   0.6300917  )
+        76        O      tau(  76) = (   0.0989151   0.3155758   1.1869439  )
+        77        O      tau(  77) = (   0.0942206   0.5581494   1.0621036  )
+        78        O      tau(  78) = (   0.3506297   1.0014456   0.7545288  )
+        79        O      tau(  79) = (   0.3750155   0.3983181   1.0535609  )
+        80        O      tau(  80) = (   0.1228303   0.0764842   0.7646734  )
+        81        O      tau(  81) = (   0.1204299   0.6293201   0.7659753  )
+        82        O      tau(  82) = (   0.4000664   0.4708612   0.7564299  )
+        83        O      tau(  83) = (   0.1483182   0.0216333   1.0644560  )
+        84        O      tau(  84) = (   0.3748687   0.9435072   1.0562740  )
+        85        P      tau(  85) = (   0.7056901   0.9492898   1.0669132  )
+        86        P      tau(  86) = (   0.9575286   0.6220438   0.7567050  )
+        87        P      tau(  87) = (   0.7847866   0.0710549   0.7548679  )
+        88        P      tau(  88) = (   0.5377283   0.4083400   1.0639036  )
+        89        O      tau(  89) = (   0.6295714   0.8788409   0.9311251  )
+        90        O      tau(  90) = (   0.8781778   0.6902700   0.8901692  )
+        91        O      tau(  91) = (   0.8603186   0.1398018   0.8911068  )
+        92        O      tau(  92) = (   0.6174712   0.3389159   0.9308820  )
+        93        O      tau(  93) = (   0.6471291   0.8583376   1.1905493  )
+        94        O      tau(  94) = (   0.8962302   0.7094244   0.6329007  )
+        95        O      tau(  95) = (   0.8420493   0.1616933   0.6305239  )
+        96        O      tau(  96) = (   0.5995227   0.3203391   1.1875050  )
+        97        O      tau(  97) = (   0.5932354   0.5636910   1.0620921  )
+        98        O      tau(  98) = (   0.8487155   0.9994995   0.7556213  )
+        99        O      tau(  99) = (   0.8751772   0.3959680   1.0535564  )
+       100        O      tau( 100) = (   0.6223291   0.0767949   0.7651476  )
+       101        O      tau( 101) = (   0.6209785   0.6292365   0.7652951  )
+       102        O      tau( 102) = (   0.9010178   0.4674118   0.7581935  )
+       103        O      tau( 103) = (   0.6430869   0.0213354   1.0652560  )
+       104        O      tau( 104) = (   0.8684566   0.9446034   1.0560219  )
+       105        Ni     tau( 105) = (   0.2423630   0.7994359   1.3760354  )
+       106        Ni     tau( 106) = (   0.4993973   0.7391311   1.6804864  )
+       107        Mn     tau( 107) = (   0.0089498   0.2581752   1.3751757  )
+       108        Ni     tau( 108) = (   0.2555203   0.1875480   1.7147440  )
+       109        Ni     tau( 109) = (   1.0007969   1.0339332   1.5383184  )
+       110        Ni     tau( 110) = (   0.2460225   0.4956919   1.5440603  )
+       111        Ni     tau( 111) = (   0.7359931   0.8001260   1.3774046  )
+       112        Mn     tau( 112) = (   0.9973763   0.7324626   1.6978130  )
+       113        Mn     tau( 113) = (   0.5067604   0.2591059   1.3740250  )
+       114        Ni     tau( 114) = (   0.7428480   0.1952512   1.6837944  )
+       115        Ni     tau( 115) = (   0.4987731   1.0381547   1.5410978  )
+       116        Ni     tau( 116) = (   0.7427219   0.4966249   1.5424991  )
+       117        P      tau( 117) = (   0.2131870   0.9257933   1.6916587  )
+       118        P      tau( 118) = (   0.4559119   0.6044880   1.3805992  )
+       119        P      tau( 119) = (   0.2850881   0.0578616   1.3821893  )
+       120        P      tau( 120) = (   0.0323162   0.3787027   1.6982374  )
+       121        O      tau( 121) = (   0.1347071   0.8640073   1.5492256  )
+       122        O      tau( 122) = (   0.3772882   0.6717903   1.5162818  )
+       123        O      tau( 123) = (   0.3593898   0.1286559   1.5165302  )
+       124        O      tau( 124) = (   0.1109838   0.3262818   1.5555432  )
+       125        O      tau( 125) = (   0.1539942   0.8264869   1.8062921  )
+       126        O      tau( 126) = (   0.3971693   0.6924762   1.2552325  )
+       127        O      tau( 127) = (   0.3421563   0.1469372   1.2562216  )
+       128        O      tau( 128) = (   0.0898411   0.2811759   1.8130034  )
+       129        O      tau( 129) = (   0.0853118   0.5370915   1.7040182  )
+       130        O      tau( 130) = (   0.3491208   0.9864055   1.3828534  )
+       131        O      tau( 131) = (   0.3706482   0.3857699   1.6886489  )
+       132        O      tau( 132) = (   0.1216767   0.0634913   1.3916025  )
+       133        O      tau( 133) = (   0.1193436   0.6078482   1.3967511  )
+       134        O      tau( 134) = (   0.3973442   0.4503950   1.3837012  )
+       135        O      tau( 135) = (   0.1487970  -0.0030508   1.6922434  )
+       136        O      tau( 136) = (   0.3761859   0.9190075   1.6784506  )
+       137        P      tau( 137) = (   0.7099731   0.9276212   1.6969971  )
+       138        P      tau( 138) = (   0.9565988   0.6017915   1.3869988  )
+       139        P      tau( 139) = (   0.7850320   0.0557964   1.3814017  )
+       140        P      tau( 140) = (   0.5341584   0.3909479   1.7019963  )
+       141        O      tau( 141) = (   0.6329335   0.8686924   1.5518520  )
+       142        O      tau( 142) = (   0.8798187   0.6672706   1.5242031  )
+       143        O      tau( 143) = (   0.8611821   0.1236672   1.5173706  )
+       144        O      tau( 144) = (   0.6104268   0.3268639   1.5598222  )
+       145        O      tau( 145) = (   0.6499567   0.8294727   1.8098310  )
+       146        O      tau( 146) = (   0.8965323   0.6932672   1.2652725  )
+       147        O      tau( 147) = (   0.8423135   0.1469704   1.2572506  )
+       148        O      tau( 148) = (   0.5974078   0.2970599   1.8177101  )
+       149        O      tau( 149) = (   0.5903229   0.5473287   1.6970866  )
+       150        O      tau( 150) = (   0.8477944   0.9841351   1.3810722  )
+       151        O      tau( 151) = (   0.8683058   0.3760079   1.6828064  )
+       152        O      tau( 152) = (   0.6224566   0.0643770   1.3939749  )
+       153        O      tau( 153) = (   0.6187923   0.6106371   1.3938596  )
+       154        O      tau( 154) = (   0.8971193   0.4481891   1.3841611  )
+       155        O      tau( 155) = (   0.6540414   0.0026232   1.6976259  )
+       156        O      tau( 156) = (   0.8743841   0.9191802   1.6841294  )
+       157        O      tau( 157) = (   0.3743733   0.1030868   1.8397344  )
+       158        H      tau( 158) = (   0.4562925   0.1635293   1.8637603  )
+
+     -------------------------------------------------
+     Parameters for Dispersion (Grimme-D2) Correction:
+     -------------------------------------------------
+       atom      VdW radius       C_6     
+
+        Ni         2.952        374.666
+        Mn         2.952        374.666
+        P          3.222        271.980
+        O          2.536         24.284
+        H          1.892          4.857
+
+     number of k points=     1  Gaussian smearing, width (Ry)=  0.0100
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+
+     Dense  grid:  1979026 G-vectors     FFT dimensions: ( 128, 144, 450)
+
+     Smooth grid:   500628 G-vectors     FFT dimensions: (  81,  90, 288)
+
+     Estimated max dynamical RAM per process >     333.40 MB
+
+     Estimated total dynamical RAM >      20.84 GB
+
+     Check: negative core charge=   -0.000002
+     Generating pointlists ...
+     new r_m :   0.0792 (alat units)  1.4143 (a.u.) for type    1
+     new r_m :   0.0876 (alat units)  1.5646 (a.u.) for type    2
+     new r_m :   0.0665 (alat units)  1.1867 (a.u.) for type    3
+     new r_m :   0.0431 (alat units)  0.7703 (a.u.) for type    4
+     new r_m :   0.0431 (alat units)  0.7703 (a.u.) for type    5
+
+     Initial potential from superposition of free atoms
+
+     starting charge    1107.8886, renormalised to    1108.0000
+
+     negative rho (up, down):  1.531E-03 4.671E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole                1.6289 Ry au,          4.1403 Debye
+        Dipole field          0.0010 Ry au, 
+ 
+        Potential amp.       -0.1068 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole                1.6289 Ry au,          4.1403 Debye
+        Dipole field          0.0010 Ry au, 
+ 
+        Potential amp.       -0.1068 Ry
+        Total length         54.7057 bohr
+ 
+     Starting wfcs are  818 randomized atomic wfcs
+
+     total cpu time spent up to now is       11.8 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  5.5
+
+     negative rho (up, down):  4.463E-01 1.169E-06
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -3.4337 Ry au,         -8.7276 Debye
+        Dipole field         -0.0021 Ry au, 
+ 
+        Potential amp.        0.2252 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -3.4337 Ry au,         -8.7276 Debye
+        Dipole field         -0.0021 Ry au, 
+ 
+        Potential amp.        0.2252 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is       41.3 secs
+
+     total energy              =   -7859.34092403 Ry
+     estimated scf accuracy    <     749.24660355 Ry
+
+     total magnetization       =   222.00 Bohr mag/cell
+     absolute magnetization    =   319.53 Bohr mag/cell
+
+     iteration #  2     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.092E-01 8.017E-07
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -2.5451 Ry au,         -6.4690 Debye
+        Dipole field         -0.0015 Ry au, 
+ 
+        Potential amp.        0.1669 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -2.5451 Ry au,         -6.4690 Debye
+        Dipole field         -0.0015 Ry au, 
+ 
+        Potential amp.        0.1669 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is       59.4 secs
+
+     total energy              =   -7941.79322946 Ry
+     estimated scf accuracy    <     162.39678990 Ry
+
+     total magnetization       =   161.63 Bohr mag/cell
+     absolute magnetization    =   210.15 Bohr mag/cell
+
+     iteration #  3     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  1.0
+
+     negative rho (up, down):  3.586E-01 6.995E-07
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -2.0972 Ry au,         -5.3306 Debye
+        Dipole field         -0.0013 Ry au, 
+ 
+        Potential amp.        0.1376 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -2.0972 Ry au,         -5.3306 Debye
+        Dipole field         -0.0013 Ry au, 
+ 
+        Potential amp.        0.1376 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is       72.9 secs
+
+     total energy              =   -7974.12781411 Ry
+     estimated scf accuracy    <     103.84567776 Ry
+
+     total magnetization       =   140.15 Bohr mag/cell
+     absolute magnetization    =   190.32 Bohr mag/cell
+
+     iteration #  4     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  9.37E-03,  avg # of iterations =  1.0
+
+     negative rho (up, down):  2.817E-01 1.449E-07
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -2.0623 Ry au,         -5.2418 Debye
+        Dipole field         -0.0012 Ry au, 
+ 
+        Potential amp.        0.1353 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -2.0623 Ry au,         -5.2418 Debye
+        Dipole field         -0.0012 Ry au, 
+ 
+        Potential amp.        0.1353 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is       86.2 secs
+
+     total energy              =   -8005.32258796 Ry
+     estimated scf accuracy    <      82.09477107 Ry
+
+     total magnetization       =   123.15 Bohr mag/cell
+     absolute magnetization    =   175.55 Bohr mag/cell
+
+     iteration #  5     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  7.41E-03,  avg # of iterations =  1.0
+
+     negative rho (up, down):  2.363E-02 2.790E-08
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.5207 Ry au,         -3.8653 Debye
+        Dipole field         -0.0009 Ry au, 
+ 
+        Potential amp.        0.0997 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.5207 Ry au,         -3.8653 Debye
+        Dipole field         -0.0009 Ry au, 
+ 
+        Potential amp.        0.0997 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is       99.5 secs
+
+     total energy              =   -8065.48149624 Ry
+     estimated scf accuracy    <      65.22842247 Ry
+
+     total magnetization       =   106.03 Bohr mag/cell
+     absolute magnetization    =   158.90 Bohr mag/cell
+
+     iteration #  6     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  5.89E-03,  avg # of iterations =  1.0
+
+     negative rho (up, down):  2.065E-04 3.439E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.1027 Ry au,         -2.8028 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0723 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.1027 Ry au,         -2.8028 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0723 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      114.1 secs
+
+     total energy              =   -8076.39538347 Ry
+     estimated scf accuracy    <      12.32717700 Ry
+
+     total magnetization       =   100.00 Bohr mag/cell
+     absolute magnetization    =   130.88 Bohr mag/cell
+
+     iteration #  7     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.11E-03,  avg # of iterations =  7.0
+
+     negative rho (up, down):  2.023E-04 3.484E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.1022 Ry au,         -2.8014 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0723 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.1022 Ry au,         -2.8014 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0723 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      139.1 secs
+
+     total energy              =   -8078.81388384 Ry
+     estimated scf accuracy    <      28.55959926 Ry
+
+     total magnetization       =    69.92 Bohr mag/cell
+     absolute magnetization    =    87.68 Bohr mag/cell
+
+     iteration #  8     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.11E-03,  avg # of iterations =  1.0
+
+     negative rho (up, down):  2.145E-04 3.782E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0911 Ry au,         -2.7734 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0716 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0911 Ry au,         -2.7734 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0716 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      151.9 secs
+
+     total energy              =   -8078.92548800 Ry
+     estimated scf accuracy    <      28.29267283 Ry
+
+     total magnetization       =    69.94 Bohr mag/cell
+     absolute magnetization    =    87.27 Bohr mag/cell
+
+     iteration #  9     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.11E-03,  avg # of iterations =  1.0
+
+     negative rho (up, down):  8.742E-04 5.742E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2385 Ry au,         -3.1478 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0812 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2385 Ry au,         -3.1478 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0812 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      164.9 secs
+
+     total energy              =   -8078.09916960 Ry
+     estimated scf accuracy    <      29.04819515 Ry
+
+     total magnetization       =    69.77 Bohr mag/cell
+     absolute magnetization    =    86.84 Bohr mag/cell
+
+     iteration # 10     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.11E-03,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.795E-03 3.096E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.3847 Ry au,         -3.5195 Debye
+        Dipole field         -0.0008 Ry au, 
+ 
+        Potential amp.        0.0908 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.3847 Ry au,         -3.5195 Debye
+        Dipole field         -0.0008 Ry au, 
+ 
+        Potential amp.        0.0908 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      177.5 secs
+
+     total energy              =   -8077.94148624 Ry
+     estimated scf accuracy    <      12.03058643 Ry
+
+     total magnetization       =    79.23 Bohr mag/cell
+     absolute magnetization    =    93.37 Bohr mag/cell
+
+     iteration # 11     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.09E-03,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.325E-03 3.324E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.3192 Ry au,         -3.3532 Debye
+        Dipole field         -0.0008 Ry au, 
+ 
+        Potential amp.        0.0865 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.3192 Ry au,         -3.3532 Debye
+        Dipole field         -0.0008 Ry au, 
+ 
+        Potential amp.        0.0865 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      190.0 secs
+
+     total energy              =   -8078.09145055 Ry
+     estimated scf accuracy    <       2.50837951 Ry
+
+     total magnetization       =    91.81 Bohr mag/cell
+     absolute magnetization    =   102.84 Bohr mag/cell
+
+     iteration # 12     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  1 eigenvalues not converged
+     ethr =  2.26E-04,  avg # of iterations = 11.0
+
+     negative rho (up, down):  1.073E-03 8.650E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.1903 Ry au,         -3.0255 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0781 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.1903 Ry au,         -3.0255 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0781 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      209.8 secs
+
+     total energy              =   -8078.17346399 Ry
+     estimated scf accuracy    <       2.22719965 Ry
+
+     total magnetization       =    90.77 Bohr mag/cell
+     absolute magnetization    =   101.37 Bohr mag/cell
+
+     iteration # 13     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.01E-04,  avg # of iterations =  1.5
+
+     negative rho (up, down):  2.601E-03 2.828E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2177 Ry au,         -3.0952 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0799 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2177 Ry au,         -3.0952 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0799 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      223.3 secs
+
+     total energy              =   -8078.13116554 Ry
+     estimated scf accuracy    <       6.83148736 Ry
+
+     total magnetization       =    83.26 Bohr mag/cell
+     absolute magnetization    =    94.25 Bohr mag/cell
+
+     iteration # 14     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.01E-04,  avg # of iterations =  1.5
+
+     negative rho (up, down):  1.276E-03 1.516E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2232 Ry au,         -3.1090 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0802 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2232 Ry au,         -3.1090 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0802 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      236.2 secs
+
+     total energy              =   -8078.27945644 Ry
+     estimated scf accuracy    <       1.75767122 Ry
+
+     total magnetization       =    93.03 Bohr mag/cell
+     absolute magnetization    =   101.21 Bohr mag/cell
+
+     iteration # 15     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.59E-04,  avg # of iterations =  1.5
+
+     negative rho (up, down):  1.049E-03 1.741E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2450 Ry au,         -3.1644 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0817 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2450 Ry au,         -3.1644 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0817 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      249.2 secs
+
+     total energy              =   -8078.35364944 Ry
+     estimated scf accuracy    <       1.53270723 Ry
+
+     total magnetization       =    92.53 Bohr mag/cell
+     absolute magnetization    =   100.09 Bohr mag/cell
+
+     iteration # 16     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.38E-04,  avg # of iterations =  1.5
+
+     negative rho (up, down):  6.990E-04 1.580E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2543 Ry au,         -3.1881 Debye
+        Dipole field         -0.0008 Ry au, 
+ 
+        Potential amp.        0.0823 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2543 Ry au,         -3.1881 Debye
+        Dipole field         -0.0008 Ry au, 
+ 
+        Potential amp.        0.0823 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      262.1 secs
+
+     total energy              =   -8078.46303443 Ry
+     estimated scf accuracy    <       0.64719241 Ry
+
+     total magnetization       =    95.37 Bohr mag/cell
+     absolute magnetization    =   101.18 Bohr mag/cell
+
+     iteration # 17     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  5.84E-05,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.800E-04 8.533E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2358 Ry au,         -3.1410 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0811 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.2358 Ry au,         -3.1410 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0811 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      275.8 secs
+
+     total energy              =   -8078.49170782 Ry
+     estimated scf accuracy    <       0.28216160 Ry
+
+     total magnetization       =    97.77 Bohr mag/cell
+     absolute magnetization    =   101.36 Bohr mag/cell
+
+     iteration # 18     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  1 eigenvalues not converged
+     ethr =  2.55E-05,  avg # of iterations = 11.0
+
+     negative rho (up, down):  2.751E-04 5.016E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.1748 Ry au,         -2.9860 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0771 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.1748 Ry au,         -2.9860 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0771 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      298.3 secs
+
+     total energy              =   -8078.54506233 Ry
+     estimated scf accuracy    <       0.18837466 Ry
+
+     total magnetization       =    96.90 Bohr mag/cell
+     absolute magnetization    =   100.30 Bohr mag/cell
+
+     iteration # 19     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  5 eigenvalues not converged
+     ethr =  1.70E-05,  avg # of iterations = 11.0
+
+     negative rho (up, down):  3.252E-04 2.518E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0916 Ry au,         -2.7745 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0716 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0916 Ry au,         -2.7745 Debye
+        Dipole field         -0.0007 Ry au, 
+ 
+        Potential amp.        0.0716 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      319.0 secs
+
+     total energy              =   -8078.56165301 Ry
+     estimated scf accuracy    <       0.07676455 Ry
+
+     total magnetization       =    97.11 Bohr mag/cell
+     absolute magnetization    =    98.95 Bohr mag/cell
+
+     iteration # 20     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  3 eigenvalues not converged
+     ethr =  6.93E-06,  avg # of iterations = 11.0
+
+     negative rho (up, down):  4.219E-04 2.860E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0789 Ry au,         -2.7424 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0708 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0789 Ry au,         -2.7424 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0708 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      339.1 secs
+
+     total energy              =   -8078.56435844 Ry
+     estimated scf accuracy    <       0.10158030 Ry
+
+     total magnetization       =    97.36 Bohr mag/cell
+     absolute magnetization    =    98.82 Bohr mag/cell
+
+     iteration # 21     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  6.93E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  3.788E-04 1.027E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0232 Ry au,         -2.6007 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0671 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0232 Ry au,         -2.6007 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0671 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      352.0 secs
+
+     total energy              =   -8078.55964317 Ry
+     estimated scf accuracy    <       0.06757144 Ry
+
+     total magnetization       =    97.43 Bohr mag/cell
+     absolute magnetization    =    98.75 Bohr mag/cell
+
+     iteration # 22     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  6.10E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.208E-04 5.118E-05
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9993 Ry au,         -2.5400 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0655 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9993 Ry au,         -2.5400 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0655 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      365.9 secs
+
+     total energy              =   -8078.55921812 Ry
+     estimated scf accuracy    <       0.05112636 Ry
+
+     total magnetization       =    97.42 Bohr mag/cell
+     absolute magnetization    =    98.68 Bohr mag/cell
+
+     iteration # 23     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.61E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.605E-04 3.150E-05
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9880 Ry au,         -2.5112 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0648 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9880 Ry au,         -2.5112 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0648 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      379.3 secs
+
+     total energy              =   -8078.55968513 Ry
+     estimated scf accuracy    <       0.05045272 Ry
+
+     total magnetization       =    97.36 Bohr mag/cell
+     absolute magnetization    =    98.62 Bohr mag/cell
+
+     iteration # 24     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.55E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.236E-04 7.475E-05
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0038 Ry au,         -2.5513 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0658 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0038 Ry au,         -2.5513 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0658 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      392.5 secs
+
+     total energy              =   -8078.56057972 Ry
+     estimated scf accuracy    <       0.05807278 Ry
+
+     total magnetization       =    97.33 Bohr mag/cell
+     absolute magnetization    =    98.60 Bohr mag/cell
+
+     iteration # 25     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.55E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  3.477E-04 9.670E-05
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0079 Ry au,         -2.5618 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0661 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0079 Ry au,         -2.5618 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0661 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      405.1 secs
+
+     total energy              =   -8078.56112477 Ry
+     estimated scf accuracy    <       0.06081966 Ry
+
+     total magnetization       =    97.42 Bohr mag/cell
+     absolute magnetization    =    98.67 Bohr mag/cell
+
+     iteration # 26     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.55E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  3.662E-04 1.036E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0142 Ry au,         -2.5778 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0665 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0142 Ry au,         -2.5778 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0665 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      417.1 secs
+
+     total energy              =   -8078.56079622 Ry
+     estimated scf accuracy    <       0.06209426 Ry
+
+     total magnetization       =    97.45 Bohr mag/cell
+     absolute magnetization    =    98.70 Bohr mag/cell
+
+     iteration # 27     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.55E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  5.140E-05 7.831E-06
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9583 Ry au,         -2.4358 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0629 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9583 Ry au,         -2.4358 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0629 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      429.7 secs
+
+     total energy              =   -8078.55993397 Ry
+     estimated scf accuracy    <       0.05987925 Ry
+
+     total magnetization       =    97.43 Bohr mag/cell
+     absolute magnetization    =    98.69 Bohr mag/cell
+
+     iteration # 28     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.55E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  6.401E-05 1.927E-05
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9389 Ry au,         -2.3865 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0616 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9389 Ry au,         -2.3865 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0616 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      443.4 secs
+
+     total energy              =   -8078.55847874 Ry
+     estimated scf accuracy    <       0.05211544 Ry
+
+     total magnetization       =    97.40 Bohr mag/cell
+     absolute magnetization    =    98.73 Bohr mag/cell
+
+     iteration # 29     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.55E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  1.127E-04 3.351E-05
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9216 Ry au,         -2.3424 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0604 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9216 Ry au,         -2.3424 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0604 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      456.1 secs
+
+     total energy              =   -8078.55654102 Ry
+     estimated scf accuracy    <       0.04994934 Ry
+
+     total magnetization       =    97.37 Bohr mag/cell
+     absolute magnetization    =    98.77 Bohr mag/cell
+
+     iteration # 30     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.51E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  1.108E-04 3.007E-05
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9087 Ry au,         -2.3098 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0596 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9087 Ry au,         -2.3098 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0596 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      469.0 secs
+
+     total energy              =   -8078.55565361 Ry
+     estimated scf accuracy    <       0.04855346 Ry
+
+     total magnetization       =    97.37 Bohr mag/cell
+     absolute magnetization    =    98.75 Bohr mag/cell
+
+     iteration # 31     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.38E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  8.111E-05 2.368E-05
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9193 Ry au,         -2.3367 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0603 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9193 Ry au,         -2.3367 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0603 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      481.9 secs
+
+     total energy              =   -8078.55762538 Ry
+     estimated scf accuracy    <       0.04846718 Ry
+
+     total magnetization       =    97.39 Bohr mag/cell
+     absolute magnetization    =    98.73 Bohr mag/cell
+
+     iteration # 32     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.37E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  1.801E-04 1.587E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8674 Ry au,         -2.2047 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0569 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8674 Ry au,         -2.2047 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0569 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      493.7 secs
+
+     total energy              =   -8078.56153125 Ry
+     estimated scf accuracy    <       0.04695309 Ry
+
+     total magnetization       =    97.34 Bohr mag/cell
+     absolute magnetization    =    98.70 Bohr mag/cell
+
+     iteration # 33     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.24E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.115E-04 1.016E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8524 Ry au,         -2.1666 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0559 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8524 Ry au,         -2.1666 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0559 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      506.9 secs
+
+     total energy              =   -8078.56285486 Ry
+     estimated scf accuracy    <       0.04424538 Ry
+
+     total magnetization       =    97.15 Bohr mag/cell
+     absolute magnetization    =    98.53 Bohr mag/cell
+
+     iteration # 34     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  3.99E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  1.018E-03 1.026E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8747 Ry au,         -2.2233 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0574 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8747 Ry au,         -2.2233 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0574 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      519.3 secs
+
+     total energy              =   -8078.56182824 Ry
+     estimated scf accuracy    <       0.04586381 Ry
+
+     total magnetization       =    97.07 Bohr mag/cell
+     absolute magnetization    =    98.43 Bohr mag/cell
+
+     iteration # 35     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  3.99E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  9.870E-04 9.852E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9207 Ry au,         -2.3401 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0604 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9207 Ry au,         -2.3401 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0604 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      532.8 secs
+
+     total energy              =   -8078.56239690 Ry
+     estimated scf accuracy    <       0.03863505 Ry
+
+     total magnetization       =    97.17 Bohr mag/cell
+     absolute magnetization    =    98.55 Bohr mag/cell
+
+     iteration # 36     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  3.49E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  3.226E-03 3.282E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0080 Ry au,         -2.5620 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0661 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0080 Ry au,         -2.5620 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0661 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      544.9 secs
+
+     total energy              =   -8078.56298199 Ry
+     estimated scf accuracy    <       0.03514787 Ry
+
+     total magnetization       =    97.17 Bohr mag/cell
+     absolute magnetization    =    98.53 Bohr mag/cell
+
+     iteration # 37     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  3.17E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.454E-03 7.738E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9963 Ry au,         -2.5323 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0653 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9963 Ry au,         -2.5323 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0653 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      558.7 secs
+
+     total energy              =   -8078.56275819 Ry
+     estimated scf accuracy    <       0.02719628 Ry
+
+     total magnetization       =    97.05 Bohr mag/cell
+     absolute magnetization    =    98.29 Bohr mag/cell
+
+     iteration # 38     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.929E-03 5.151E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9353 Ry au,         -2.3773 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0613 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9353 Ry au,         -2.3773 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0613 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      572.6 secs
+
+     total energy              =   -8078.56299047 Ry
+     estimated scf accuracy    <       0.02812573 Ry
+
+     total magnetization       =    97.02 Bohr mag/cell
+     absolute magnetization    =    98.25 Bohr mag/cell
+
+     iteration # 39     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  6.131E-03 6.119E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9227 Ry au,         -2.3452 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0605 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9227 Ry au,         -2.3452 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0605 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      586.1 secs
+
+     total energy              =   -8078.56191158 Ry
+     estimated scf accuracy    <       0.02990756 Ry
+
+     total magnetization       =    97.03 Bohr mag/cell
+     absolute magnetization    =    98.26 Bohr mag/cell
+
+     iteration # 40     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  6.047E-03 6.227E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9369 Ry au,         -2.3813 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0614 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9369 Ry au,         -2.3813 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0614 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      599.9 secs
+
+     total energy              =   -8078.56262871 Ry
+     estimated scf accuracy    <       0.03247665 Ry
+
+     total magnetization       =    97.06 Bohr mag/cell
+     absolute magnetization    =    98.27 Bohr mag/cell
+
+     iteration # 41     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  6.055E-03 6.289E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9296 Ry au,         -2.3628 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0610 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9296 Ry au,         -2.3628 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0610 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      612.5 secs
+
+     total energy              =   -8078.56259438 Ry
+     estimated scf accuracy    <       0.03155248 Ry
+
+     total magnetization       =    97.04 Bohr mag/cell
+     absolute magnetization    =    98.27 Bohr mag/cell
+
+     iteration # 42     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  5.570E-03 5.880E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9407 Ry au,         -2.3911 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0617 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9407 Ry au,         -2.3911 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0617 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      626.2 secs
+
+     total energy              =   -8078.56278330 Ry
+     estimated scf accuracy    <       0.03321972 Ry
+
+     total magnetization       =    97.00 Bohr mag/cell
+     absolute magnetization    =    98.26 Bohr mag/cell
+
+     iteration # 43     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  4.527E-03 4.613E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9618 Ry au,         -2.4446 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0631 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9618 Ry au,         -2.4446 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0631 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      639.0 secs
+
+     total energy              =   -8078.56302546 Ry
+     estimated scf accuracy    <       0.03120551 Ry
+
+     total magnetization       =    97.02 Bohr mag/cell
+     absolute magnetization    =    98.22 Bohr mag/cell
+
+     iteration # 44     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.843E-03 4.901E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0318 Ry au,         -2.6226 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0677 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0318 Ry au,         -2.6226 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0677 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      652.4 secs
+
+     total energy              =   -8078.56299495 Ry
+     estimated scf accuracy    <       0.03249865 Ry
+
+     total magnetization       =    97.02 Bohr mag/cell
+     absolute magnetization    =    98.19 Bohr mag/cell
+
+     iteration # 45     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  5.754E-03 5.964E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0010 Ry au,         -2.5443 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0657 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0010 Ry au,         -2.5443 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0657 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      666.1 secs
+
+     total energy              =   -8078.56339076 Ry
+     estimated scf accuracy    <       0.02719847 Ry
+
+     total magnetization       =    97.12 Bohr mag/cell
+     absolute magnetization    =    98.28 Bohr mag/cell
+
+     iteration # 46     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  7.173E-03 7.431E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0114 Ry au,         -2.5708 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0663 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0114 Ry au,         -2.5708 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0663 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      679.6 secs
+
+     total energy              =   -8078.56318771 Ry
+     estimated scf accuracy    <       0.02777123 Ry
+
+     total magnetization       =    97.03 Bohr mag/cell
+     absolute magnetization    =    98.24 Bohr mag/cell
+
+     iteration # 47     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.45E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  5.941E-03 6.147E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0023 Ry au,         -2.5475 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0657 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0023 Ry au,         -2.5475 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0657 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      693.4 secs
+
+     total energy              =   -8078.56338846 Ry
+     estimated scf accuracy    <       0.02629424 Ry
+
+     total magnetization       =    97.07 Bohr mag/cell
+     absolute magnetization    =    98.23 Bohr mag/cell
+
+     iteration # 48     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.37E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  6.018E-03 6.248E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9992 Ry au,         -2.5396 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0655 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9992 Ry au,         -2.5396 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0655 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      705.3 secs
+
+     total energy              =   -8078.56341172 Ry
+     estimated scf accuracy    <       0.02580336 Ry
+
+     total magnetization       =    97.10 Bohr mag/cell
+     absolute magnetization    =    98.26 Bohr mag/cell
+
+     iteration # 49     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.33E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  6.098E-03 6.384E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0037 Ry au,         -2.5511 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0658 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0037 Ry au,         -2.5511 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0658 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      718.1 secs
+
+     total energy              =   -8078.56357706 Ry
+     estimated scf accuracy    <       0.02574024 Ry
+
+     total magnetization       =    97.11 Bohr mag/cell
+     absolute magnetization    =    98.26 Bohr mag/cell
+
+     iteration # 50     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.32E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  5.769E-03 6.278E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0102 Ry au,         -2.5676 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0663 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0102 Ry au,         -2.5676 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0663 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      730.1 secs
+
+     total energy              =   -8078.56365024 Ry
+     estimated scf accuracy    <       0.02528083 Ry
+
+     total magnetization       =    97.10 Bohr mag/cell
+     absolute magnetization    =    98.26 Bohr mag/cell
+
+     iteration # 51     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.28E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  5.284E-03 5.819E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0282 Ry au,         -2.6133 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0674 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0282 Ry au,         -2.6133 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0674 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      742.8 secs
+
+     total energy              =   -8078.56330971 Ry
+     estimated scf accuracy    <       0.02520253 Ry
+
+     total magnetization       =    97.07 Bohr mag/cell
+     absolute magnetization    =    98.28 Bohr mag/cell
+
+     iteration # 52     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.27E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  5.524E-03 5.910E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0394 Ry au,         -2.6418 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0682 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0394 Ry au,         -2.6418 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0682 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      755.1 secs
+
+     total energy              =   -8078.56411063 Ry
+     estimated scf accuracy    <       0.02680282 Ry
+
+     total magnetization       =    97.05 Bohr mag/cell
+     absolute magnetization    =    98.21 Bohr mag/cell
+
+     iteration # 53     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.27E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  6.104E-03 6.658E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0375 Ry au,         -2.6371 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0680 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0375 Ry au,         -2.6371 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0680 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      767.7 secs
+
+     total energy              =   -8078.56358965 Ry
+     estimated scf accuracy    <       0.02680065 Ry
+
+     total magnetization       =    97.06 Bohr mag/cell
+     absolute magnetization    =    98.24 Bohr mag/cell
+
+     iteration # 54     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.27E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  6.311E-03 6.945E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9568 Ry au,         -2.4320 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0628 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9568 Ry au,         -2.4320 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0628 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      780.8 secs
+
+     total energy              =   -8078.56331206 Ry
+     estimated scf accuracy    <       0.02537955 Ry
+
+     total magnetization       =    97.06 Bohr mag/cell
+     absolute magnetization    =    98.26 Bohr mag/cell
+
+     iteration # 55     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.27E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  6.817E-03 7.429E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9609 Ry au,         -2.4425 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0630 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9609 Ry au,         -2.4425 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0630 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      794.3 secs
+
+     total energy              =   -8078.56364065 Ry
+     estimated scf accuracy    <       0.02520028 Ry
+
+     total magnetization       =    96.99 Bohr mag/cell
+     absolute magnetization    =    98.19 Bohr mag/cell
+
+     iteration # 56     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.27E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  6.403E-03 6.949E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9123 Ry au,         -2.3189 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0598 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9123 Ry au,         -2.3189 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0598 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      807.8 secs
+
+     total energy              =   -8078.56305138 Ry
+     estimated scf accuracy    <       0.02427818 Ry
+
+     total magnetization       =    97.02 Bohr mag/cell
+     absolute magnetization    =    98.21 Bohr mag/cell
+
+     iteration # 57     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  5.825E-03 6.383E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9280 Ry au,         -2.3586 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0609 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9280 Ry au,         -2.3586 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0609 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      821.5 secs
+
+     total energy              =   -8078.56322141 Ry
+     estimated scf accuracy    <       0.02568720 Ry
+
+     total magnetization       =    97.02 Bohr mag/cell
+     absolute magnetization    =    98.21 Bohr mag/cell
+
+     iteration # 58     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  3.350E-03 3.626E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0550 Ry au,         -2.6816 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0692 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0550 Ry au,         -2.6816 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0692 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      833.6 secs
+
+     total energy              =   -8078.56399741 Ry
+     estimated scf accuracy    <       0.02530925 Ry
+
+     total magnetization       =    97.02 Bohr mag/cell
+     absolute magnetization    =    98.20 Bohr mag/cell
+
+     iteration # 59     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.286E-03 3.514E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9635 Ry au,         -2.4489 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0632 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9635 Ry au,         -2.4489 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0632 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      847.4 secs
+
+     total energy              =   -8078.56342501 Ry
+     estimated scf accuracy    <       0.02763422 Ry
+
+     total magnetization       =    97.07 Bohr mag/cell
+     absolute magnetization    =    98.29 Bohr mag/cell
+
+     iteration # 60     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  3.737E-03 4.242E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9312 Ry au,         -2.3669 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0611 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9312 Ry au,         -2.3669 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0611 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      859.8 secs
+
+     total energy              =   -8078.56319200 Ry
+     estimated scf accuracy    <       0.02787709 Ry
+
+     total magnetization       =    97.06 Bohr mag/cell
+     absolute magnetization    =    98.27 Bohr mag/cell
+
+     iteration # 61     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  3.526E-03 3.908E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0030 Ry au,         -2.5493 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0658 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -1.0030 Ry au,         -2.5493 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0658 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      872.5 secs
+
+     total energy              =   -8078.56273527 Ry
+     estimated scf accuracy    <       0.02564398 Ry
+
+     total magnetization       =    97.04 Bohr mag/cell
+     absolute magnetization    =    98.28 Bohr mag/cell
+
+     iteration # 62     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  3.036E-03 3.234E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9704 Ry au,         -2.4666 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0636 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9704 Ry au,         -2.4666 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0636 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      885.3 secs
+
+     total energy              =   -8078.56336683 Ry
+     estimated scf accuracy    <       0.02732384 Ry
+
+     total magnetization       =    97.10 Bohr mag/cell
+     absolute magnetization    =    98.21 Bohr mag/cell
+
+     iteration # 63     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.259E-03 3.343E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8865 Ry au,         -2.2533 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0581 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8865 Ry au,         -2.2533 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0581 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      899.0 secs
+
+     total energy              =   -8078.56384404 Ry
+     estimated scf accuracy    <       0.02740193 Ry
+
+     total magnetization       =    97.06 Bohr mag/cell
+     absolute magnetization    =    98.26 Bohr mag/cell
+
+     iteration # 64     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.702E-03 5.044E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8837 Ry au,         -2.2462 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0580 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8837 Ry au,         -2.2462 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0580 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      912.6 secs
+
+     total energy              =   -8078.56418870 Ry
+     estimated scf accuracy    <       0.02522187 Ry
+
+     total magnetization       =    97.05 Bohr mag/cell
+     absolute magnetization    =    98.26 Bohr mag/cell
+
+     iteration # 65     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  3.456E-03 3.841E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8370 Ry au,         -2.1273 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0549 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8370 Ry au,         -2.1273 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0549 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      924.9 secs
+
+     total energy              =   -8078.56361918 Ry
+     estimated scf accuracy    <       0.02426712 Ry
+
+     total magnetization       =    97.00 Bohr mag/cell
+     absolute magnetization    =    98.23 Bohr mag/cell
+
+     iteration # 66     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.015E-03 4.029E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9015 Ry au,         -2.2913 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0591 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9015 Ry au,         -2.2913 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0591 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      938.1 secs
+
+     total energy              =   -8078.56349617 Ry
+     estimated scf accuracy    <       0.02719497 Ry
+
+     total magnetization       =    96.97 Bohr mag/cell
+     absolute magnetization    =    98.20 Bohr mag/cell
+
+     iteration # 67     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  3.486E-03 3.547E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9106 Ry au,         -2.3144 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0597 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9106 Ry au,         -2.3144 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0597 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      949.9 secs
+
+     total energy              =   -8078.56460448 Ry
+     estimated scf accuracy    <       0.02352810 Ry
+
+     total magnetization       =    97.09 Bohr mag/cell
+     absolute magnetization    =    98.31 Bohr mag/cell
+
+     iteration # 68     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.12E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  5.252E-03 5.395E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8709 Ry au,         -2.2137 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0571 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8709 Ry au,         -2.2137 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0571 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      962.7 secs
+
+     total energy              =   -8078.56349265 Ry
+     estimated scf accuracy    <       0.02367876 Ry
+
+     total magnetization       =    97.08 Bohr mag/cell
+     absolute magnetization    =    98.30 Bohr mag/cell
+
+     iteration # 69     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.12E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.974E-03 4.016E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9086 Ry au,         -2.3095 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0596 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9086 Ry au,         -2.3095 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0596 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      977.5 secs
+
+     total energy              =   -8078.56375651 Ry
+     estimated scf accuracy    <       0.02363504 Ry
+
+     total magnetization       =    97.05 Bohr mag/cell
+     absolute magnetization    =    98.28 Bohr mag/cell
+
+     iteration # 70     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.12E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.639E-03 4.712E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8797 Ry au,         -2.2360 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0577 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8797 Ry au,         -2.2360 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0577 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is      989.2 secs
+
+     total energy              =   -8078.56357519 Ry
+     estimated scf accuracy    <       0.02482716 Ry
+
+     total magnetization       =    97.07 Bohr mag/cell
+     absolute magnetization    =    98.31 Bohr mag/cell
+
+     iteration # 71     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.12E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.890E-03 3.995E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9478 Ry au,         -2.4092 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0622 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9478 Ry au,         -2.4092 Debye
+        Dipole field         -0.0006 Ry au, 
+ 
+        Potential amp.        0.0622 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1002.5 secs
+
+     total energy              =   -8078.56334921 Ry
+     estimated scf accuracy    <       0.02408873 Ry
+
+     total magnetization       =    97.06 Bohr mag/cell
+     absolute magnetization    =    98.24 Bohr mag/cell
+
+     iteration # 72     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.12E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  3.426E-03 3.473E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9102 Ry au,         -2.3136 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0597 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.9102 Ry au,         -2.3136 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0597 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1014.0 secs
+
+     total energy              =   -8078.56296141 Ry
+     estimated scf accuracy    <       0.02744777 Ry
+
+     total magnetization       =    97.02 Bohr mag/cell
+     absolute magnetization    =    98.31 Bohr mag/cell
+
+     iteration # 73     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.12E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  4.799E-03 5.013E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8437 Ry au,         -2.1444 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0553 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.8437 Ry au,         -2.1444 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0553 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1026.3 secs
+
+     total energy              =   -8078.56318280 Ry
+     estimated scf accuracy    <       0.02548145 Ry
+
+     total magnetization       =    97.08 Bohr mag/cell
+     absolute magnetization    =    98.27 Bohr mag/cell
+
+     iteration # 74     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.12E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  4.258E-03 4.305E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.7989 Ry au,         -2.0305 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0524 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.7989 Ry au,         -2.0305 Debye
+        Dipole field         -0.0005 Ry au, 
+ 
+        Potential amp.        0.0524 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1039.1 secs
+
+     total energy              =   -8078.56284788 Ry
+     estimated scf accuracy    <       0.02223813 Ry
+
+     total magnetization       =    97.09 Bohr mag/cell
+     absolute magnetization    =    98.24 Bohr mag/cell
+
+     iteration # 75     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.01E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  3.865E-03 3.877E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.7484 Ry au,         -1.9022 Debye
+        Dipole field         -0.0004 Ry au, 
+ 
+        Potential amp.        0.0491 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.7484 Ry au,         -1.9022 Debye
+        Dipole field         -0.0004 Ry au, 
+ 
+        Potential amp.        0.0491 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1050.9 secs
+
+     total energy              =   -8078.56264359 Ry
+     estimated scf accuracy    <       0.02195215 Ry
+
+     total magnetization       =    97.11 Bohr mag/cell
+     absolute magnetization    =    98.24 Bohr mag/cell
+
+     iteration # 76     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.98E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  1.153E-03 1.318E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.5155 Ry au,         -1.3102 Debye
+        Dipole field         -0.0003 Ry au, 
+ 
+        Potential amp.        0.0338 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.5155 Ry au,         -1.3102 Debye
+        Dipole field         -0.0003 Ry au, 
+ 
+        Potential amp.        0.0338 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1062.6 secs
+
+     total energy              =   -8078.56218414 Ry
+     estimated scf accuracy    <       0.02132307 Ry
+
+     total magnetization       =    97.10 Bohr mag/cell
+     absolute magnetization    =    98.23 Bohr mag/cell
+
+     iteration # 77     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.92E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.778E-03 1.989E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.4869 Ry au,         -1.2377 Debye
+        Dipole field         -0.0003 Ry au, 
+ 
+        Potential amp.        0.0319 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.4869 Ry au,         -1.2377 Debye
+        Dipole field         -0.0003 Ry au, 
+ 
+        Potential amp.        0.0319 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1076.2 secs
+
+     total energy              =   -8078.56230531 Ry
+     estimated scf accuracy    <       0.01945392 Ry
+
+     total magnetization       =    97.01 Bohr mag/cell
+     absolute magnetization    =    98.15 Bohr mag/cell
+
+     iteration # 78     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.76E-06,  avg # of iterations =  1.5
+
+     negative rho (up, down):  3.631E-03 3.982E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.4189 Ry au,         -1.0648 Debye
+        Dipole field         -0.0003 Ry au, 
+ 
+        Potential amp.        0.0275 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.4189 Ry au,         -1.0648 Debye
+        Dipole field         -0.0003 Ry au, 
+ 
+        Potential amp.        0.0275 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1088.7 secs
+
+     total energy              =   -8078.56184729 Ry
+     estimated scf accuracy    <       0.01873424 Ry
+
+     total magnetization       =    97.01 Bohr mag/cell
+     absolute magnetization    =    98.15 Bohr mag/cell
+
+     iteration # 79     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  2 eigenvalues not converged
+     ethr =  1.69E-06,  avg # of iterations = 11.0
+
+     negative rho (up, down):  3.837E-03 4.265E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.3382 Ry au,         -0.8597 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0222 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.3382 Ry au,         -0.8597 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0222 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1107.0 secs
+
+     total energy              =   -8078.56171344 Ry
+     estimated scf accuracy    <       0.01760779 Ry
+
+     total magnetization       =    97.00 Bohr mag/cell
+     absolute magnetization    =    98.16 Bohr mag/cell
+
+     iteration # 80     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  2 eigenvalues not converged
+     ethr =  1.59E-06,  avg # of iterations = 11.0
+
+     negative rho (up, down):  1.460E-03 1.455E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.3758 Ry au,         -0.9552 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0246 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.3758 Ry au,         -0.9552 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0246 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1124.6 secs
+
+     total energy              =   -8078.56092678 Ry
+     estimated scf accuracy    <       0.01445851 Ry
+
+     total magnetization       =    97.01 Bohr mag/cell
+     absolute magnetization    =    98.18 Bohr mag/cell
+
+     iteration # 81     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  1 eigenvalues not converged
+     ethr =  1.30E-06,  avg # of iterations = 12.0
+
+     negative rho (up, down):  1.100E-03 9.691E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.3259 Ry au,         -0.8285 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0214 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.3259 Ry au,         -0.8285 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0214 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1143.2 secs
+
+     total energy              =   -8078.56135281 Ry
+     estimated scf accuracy    <       0.00770141 Ry
+
+     total magnetization       =    97.14 Bohr mag/cell
+     absolute magnetization    =    98.36 Bohr mag/cell
+
+     iteration # 82     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  6.95E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  8.629E-04 7.843E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2448 Ry au,         -0.6221 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0161 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2448 Ry au,         -0.6221 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0161 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1156.5 secs
+
+     total energy              =   -8078.56138793 Ry
+     estimated scf accuracy    <       0.00567684 Ry
+
+     total magnetization       =    97.18 Bohr mag/cell
+     absolute magnetization    =    98.42 Bohr mag/cell
+
+     iteration # 83     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  5.12E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.110E-03 1.978E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2787 Ry au,         -0.7084 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0183 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2787 Ry au,         -0.7084 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0183 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1169.9 secs
+
+     total energy              =   -8078.56125064 Ry
+     estimated scf accuracy    <       0.00433663 Ry
+
+     total magnetization       =    97.22 Bohr mag/cell
+     absolute magnetization    =    98.45 Bohr mag/cell
+
+     iteration # 84     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  3.91E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.394E-03 3.184E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2823 Ry au,         -0.7174 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0185 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2823 Ry au,         -0.7174 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0185 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1183.3 secs
+
+     total energy              =   -8078.56113706 Ry
+     estimated scf accuracy    <       0.00328060 Ry
+
+     total magnetization       =    97.22 Bohr mag/cell
+     absolute magnetization    =    98.45 Bohr mag/cell
+
+     iteration # 85     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     c_bands:  3 eigenvalues not converged
+     ethr =  2.96E-07,  avg # of iterations = 11.0
+
+     negative rho (up, down):  3.172E-03 3.008E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2683 Ry au,         -0.6819 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0176 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2683 Ry au,         -0.6819 Debye
+        Dipole field         -0.0002 Ry au, 
+ 
+        Potential amp.        0.0176 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1201.7 secs
+
+     total energy              =   -8078.56122072 Ry
+     estimated scf accuracy    <       0.00237745 Ry
+
+     total magnetization       =    97.20 Bohr mag/cell
+     absolute magnetization    =    98.42 Bohr mag/cell
+
+     iteration # 86     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.15E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.104E-03 3.150E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2232 Ry au,         -0.5673 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0146 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2232 Ry au,         -0.5673 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0146 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1215.0 secs
+
+     total energy              =   -8078.56135840 Ry
+     estimated scf accuracy    <       0.00157953 Ry
+
+     total magnetization       =    97.16 Bohr mag/cell
+     absolute magnetization    =    98.38 Bohr mag/cell
+
+     iteration # 87     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.43E-07,  avg # of iterations =  3.0
+
+     negative rho (up, down):  3.522E-03 3.574E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2230 Ry au,         -0.5669 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0146 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.2230 Ry au,         -0.5669 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0146 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1228.7 secs
+
+     total energy              =   -8078.56140448 Ry
+     estimated scf accuracy    <       0.00090110 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.35 Bohr mag/cell
+
+     iteration # 88     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  8.13E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.956E-03 3.922E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1682 Ry au,         -0.4276 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0110 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1682 Ry au,         -0.4276 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0110 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1241.8 secs
+
+     total energy              =   -8078.56140724 Ry
+     estimated scf accuracy    <       0.00070932 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.36 Bohr mag/cell
+
+     iteration # 89     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  6.40E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.528E-03 3.476E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1658 Ry au,         -0.4214 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0109 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1658 Ry au,         -0.4214 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0109 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1255.7 secs
+
+     total energy              =   -8078.56144177 Ry
+     estimated scf accuracy    <       0.00045670 Ry
+
+     total magnetization       =    97.14 Bohr mag/cell
+     absolute magnetization    =    98.36 Bohr mag/cell
+
+     iteration # 90     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.12E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.819E-03 2.744E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1419 Ry au,         -0.3608 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0093 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1419 Ry au,         -0.3608 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0093 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1269.7 secs
+
+     total energy              =   -8078.56145465 Ry
+     estimated scf accuracy    <       0.00030817 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.36 Bohr mag/cell
+
+     iteration # 91     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.78E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.029E-03 1.775E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1395 Ry au,         -0.3547 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0092 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1395 Ry au,         -0.3547 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0092 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1283.9 secs
+
+     total energy              =   -8078.56148511 Ry
+     estimated scf accuracy    <       0.00017398 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.36 Bohr mag/cell
+
+     iteration # 92     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.57E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.167E-03 1.831E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1394 Ry au,         -0.3544 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0091 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1394 Ry au,         -0.3544 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0091 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1298.2 secs
+
+     total energy              =   -8078.56150115 Ry
+     estimated scf accuracy    <       0.00007317 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.36 Bohr mag/cell
+
+     iteration # 93     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  6.60E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.230E-03 1.835E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1375 Ry au,         -0.3494 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0090 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1375 Ry au,         -0.3494 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0090 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1312.6 secs
+
+     total energy              =   -8078.56150698 Ry
+     estimated scf accuracy    <       0.00004930 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.36 Bohr mag/cell
+
+     iteration # 94     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  4.45E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.064E-03 1.658E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1434 Ry au,         -0.3644 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1434 Ry au,         -0.3644 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1327.0 secs
+
+     total energy              =   -8078.56150830 Ry
+     estimated scf accuracy    <       0.00002431 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.35 Bohr mag/cell
+
+     iteration # 95     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.19E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.907E-03 1.425E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1395 Ry au,         -0.3546 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0091 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1395 Ry au,         -0.3546 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0091 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1341.1 secs
+
+     total energy              =   -8078.56150860 Ry
+     estimated scf accuracy    <       0.00001553 Ry
+
+     total magnetization       =    97.12 Bohr mag/cell
+     absolute magnetization    =    98.35 Bohr mag/cell
+
+     iteration # 96     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  1.40E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.625E-03 1.100E-03
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1426 Ry au,         -0.3626 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1426 Ry au,         -0.3626 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1355.2 secs
+
+     total energy              =   -8078.56150746 Ry
+     estimated scf accuracy    <       0.00000993 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.35 Bohr mag/cell
+
+     iteration # 97     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  8.96E-10,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.340E-03 7.874E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1431 Ry au,         -0.3638 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1431 Ry au,         -0.3638 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1369.1 secs
+
+     total energy              =   -8078.56150582 Ry
+     estimated scf accuracy    <       0.00000567 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.34 Bohr mag/cell
+
+     iteration # 98     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  5.12E-10,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.211E-03 6.554E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1434 Ry au,         -0.3645 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1434 Ry au,         -0.3645 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1384.0 secs
+
+     total energy              =   -8078.56150539 Ry
+     estimated scf accuracy    <       0.00000347 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.34 Bohr mag/cell
+
+     iteration # 99     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  3.13E-10,  avg # of iterations =  1.5
+
+     negative rho (up, down):  1.183E-03 6.296E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1423 Ry au,         -0.3616 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0093 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1423 Ry au,         -0.3616 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0093 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1398.0 secs
+
+     total energy              =   -8078.56150554 Ry
+     estimated scf accuracy    <       0.00000238 Ry
+
+     total magnetization       =    97.13 Bohr mag/cell
+     absolute magnetization    =    98.34 Bohr mag/cell
+
+     iteration #100     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  2.15E-10,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.176E-03 6.352E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1425 Ry au,         -0.3623 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0093 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1425 Ry au,         -0.3623 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0093 Ry
+        Total length         54.7057 bohr
+ 
+
+     total cpu time spent up to now is     1412.7 secs
+
+     total energy              =   -8078.56150592 Ry
+     estimated scf accuracy    <       0.00000109 Ry
+
+     total magnetization       =    97.12 Bohr mag/cell
+     absolute magnetization    =    98.34 Bohr mag/cell
+
+     iteration #101     ecut=    50.00 Ry     beta= 0.10
+     Davidson diagonalization with overlap
+     ethr =  9.84E-11,  avg # of iterations =  2.0
+
+     negative rho (up, down):  1.166E-03 6.277E-04
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1440 Ry au,         -0.3659 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Adding external electric field
+
+     Computed dipole along edir(3) : 
+        Dipole               -0.1440 Ry au,         -0.3659 Debye
+        Dipole field         -0.0001 Ry au, 
+ 
+        Potential amp.        0.0094 Ry
+        Total length         54.7057 bohr
+ 
+ 
+     Magnetic moment per site  (integrated on atomic sphere of radius R)
+     atom   1 (R=0.079)  charge=  7.1337  magn=  1.4158
+     atom   2 (R=0.079)  charge=  7.1113  magn=  1.5286
+     atom   3 (R=0.088)  charge= 12.1165  magn=  3.9607
+     atom   4 (R=0.079)  charge=  7.1094  magn=  1.5318
+     atom   5 (R=0.079)  charge=  7.1278  magn=  1.4988
+     atom   6 (R=0.079)  charge=  7.1251  magn=  1.4946
+     atom   7 (R=0.079)  charge=  7.1329  magn=  1.4123
+     atom   8 (R=0.088)  charge= 12.1218  magn=  3.9039
+     atom   9 (R=0.088)  charge= 12.1226  magn=  3.9843
+     atom  10 (R=0.079)  charge=  7.1095  magn=  1.5260
+     atom  11 (R=0.079)  charge=  7.1293  magn=  1.4967
+     atom  12 (R=0.079)  charge=  7.1246  magn=  1.5014
+     atom  13 (R=0.066)  charge=  0.8195  magn=  0.0066
+     atom  14 (R=0.066)  charge=  0.8229  magn=  0.0035
+     atom  15 (R=0.066)  charge=  0.8230  magn=  0.0052
+     atom  16 (R=0.066)  charge=  0.8226  magn=  0.0088
+     atom  17 (R=0.043)  charge=  1.9704  magn=  0.0652
+     atom  18 (R=0.043)  charge=  1.9662  magn=  0.0904
+     atom  19 (R=0.043)  charge=  1.9714  magn=  0.0734
+     atom  20 (R=0.043)  charge=  1.9729  magn=  0.0627
+     atom  21 (R=0.043)  charge=  1.9771  magn=  0.0458
+     atom  22 (R=0.043)  charge=  1.9592  magn=  0.0438
+     atom  23 (R=0.043)  charge=  1.9635  magn=  0.0365
+     atom  24 (R=0.043)  charge=  1.9805  magn=  0.0448
+     atom  25 (R=0.043)  charge=  1.9768  magn=  0.0412
+     atom  26 (R=0.043)  charge=  1.9726  magn=  0.0497
+     atom  27 (R=0.043)  charge=  1.9743  magn=  0.0460
+     atom  28 (R=0.043)  charge=  1.9785  magn=  0.0374
+     atom  29 (R=0.043)  charge=  1.9716  magn=  0.0471
+     atom  30 (R=0.043)  charge=  1.9763  magn=  0.0447
+     atom  31 (R=0.043)  charge=  1.9730  magn=  0.0567
+     atom  32 (R=0.043)  charge=  1.9759  magn=  0.0477
+     atom  33 (R=0.066)  charge=  0.8184  magn=  0.0068
+     atom  34 (R=0.066)  charge=  0.8263  magn=  0.0045
+     atom  35 (R=0.066)  charge=  0.8233  magn=  0.0050
+     atom  36 (R=0.066)  charge=  0.8208  magn=  0.0077
+     atom  37 (R=0.043)  charge=  1.9670  magn=  0.0767
+     atom  38 (R=0.043)  charge=  1.9731  magn=  0.0710
+     atom  39 (R=0.043)  charge=  1.9708  magn=  0.0723
+     atom  40 (R=0.043)  charge=  1.9723  magn=  0.0666
+     atom  41 (R=0.043)  charge=  1.9748  magn=  0.0542
+     atom  42 (R=0.043)  charge=  1.9608  magn=  0.0430
+     atom  43 (R=0.043)  charge=  1.9621  magn=  0.0352
+     atom  44 (R=0.043)  charge=  1.9800  magn=  0.0447
+     atom  45 (R=0.043)  charge=  1.9743  magn=  0.0551
+     atom  46 (R=0.043)  charge=  1.9711  magn=  0.0490
+     atom  47 (R=0.043)  charge=  1.9730  magn=  0.0458
+     atom  48 (R=0.043)  charge=  1.9791  magn=  0.0373
+     atom  49 (R=0.043)  charge=  1.9724  magn=  0.0483
+     atom  50 (R=0.043)  charge=  1.9752  magn=  0.0431
+     atom  51 (R=0.043)  charge=  1.9722  magn=  0.0533
+     atom  52 (R=0.043)  charge=  1.9779  magn=  0.0359
+     atom  53 (R=0.079)  charge=  7.1117  magn=  1.5298
+     atom  54 (R=0.079)  charge=  7.1117  magn=  1.5260
+     atom  55 (R=0.088)  charge= 12.1325  magn=  3.9450
+     atom  56 (R=0.079)  charge=  7.1129  magn=  1.5222
+     atom  57 (R=0.079)  charge=  7.1275  magn=  1.5018
+     atom  58 (R=0.079)  charge=  7.1261  magn=  1.4928
+     atom  59 (R=0.079)  charge=  7.1136  magn=  1.5232
+     atom  60 (R=0.088)  charge= 12.1293  magn=  3.9324
+     atom  61 (R=0.088)  charge= 12.1387  magn=  3.9676
+     atom  62 (R=0.079)  charge=  7.1105  magn=  1.5232
+     atom  63 (R=0.079)  charge=  7.1294  magn=  1.5032
+     atom  64 (R=0.079)  charge=  7.1271  magn=  1.4943
+     atom  65 (R=0.066)  charge=  0.8198  magn=  0.0066
+     atom  66 (R=0.066)  charge=  0.8198  magn=  0.0065
+     atom  67 (R=0.066)  charge=  0.8212  magn=  0.0077
+     atom  68 (R=0.066)  charge=  0.8231  magn=  0.0088
+     atom  69 (R=0.043)  charge=  1.9714  magn=  0.0684
+     atom  70 (R=0.043)  charge=  1.9665  magn=  0.0795
+     atom  71 (R=0.043)  charge=  1.9708  magn=  0.0677
+     atom  72 (R=0.043)  charge=  1.9738  magn=  0.0624
+     atom  73 (R=0.043)  charge=  1.9778  magn=  0.0467
+     atom  74 (R=0.043)  charge=  1.9746  magn=  0.0534
+     atom  75 (R=0.043)  charge=  1.9772  magn=  0.0466
+     atom  76 (R=0.043)  charge=  1.9807  magn=  0.0466
+     atom  77 (R=0.043)  charge=  1.9778  magn=  0.0426
+     atom  78 (R=0.043)  charge=  1.9728  magn=  0.0549
+     atom  79 (R=0.043)  charge=  1.9731  magn=  0.0469
+     atom  80 (R=0.043)  charge=  1.9775  magn=  0.0372
+     atom  81 (R=0.043)  charge=  1.9734  magn=  0.0462
+     atom  82 (R=0.043)  charge=  1.9771  magn=  0.0466
+     atom  83 (R=0.043)  charge=  1.9735  magn=  0.0570
+     atom  84 (R=0.043)  charge=  1.9763  magn=  0.0484
+     atom  85 (R=0.066)  charge=  0.8186  magn=  0.0068
+     atom  86 (R=0.066)  charge=  0.8234  magn=  0.0091
+     atom  87 (R=0.066)  charge=  0.8212  magn=  0.0073
+     atom  88 (R=0.066)  charge=  0.8216  magn=  0.0077
+     atom  89 (R=0.043)  charge=  1.9686  magn=  0.0793
+     atom  90 (R=0.043)  charge=  1.9736  magn=  0.0627
+     atom  91 (R=0.043)  charge=  1.9709  magn=  0.0673
+     atom  92 (R=0.043)  charge=  1.9724  magn=  0.0666
+     atom  93 (R=0.043)  charge=  1.9725  magn=  0.0557
+     atom  94 (R=0.043)  charge=  1.9817  magn=  0.0460
+     atom  95 (R=0.043)  charge=  1.9777  magn=  0.0461
+     atom  96 (R=0.043)  charge=  1.9797  magn=  0.0452
+     atom  97 (R=0.043)  charge=  1.9720  magn=  0.0553
+     atom  98 (R=0.043)  charge=  1.9734  magn=  0.0536
+     atom  99 (R=0.043)  charge=  1.9734  magn=  0.0468
+     atom 100 (R=0.043)  charge=  1.9777  magn=  0.0377
+     atom 101 (R=0.043)  charge=  1.9737  magn=  0.0485
+     atom 102 (R=0.043)  charge=  1.9768  magn=  0.0437
+     atom 103 (R=0.043)  charge=  1.9722  magn=  0.0540
+     atom 104 (R=0.043)  charge=  1.9782  magn=  0.0371
+     atom 105 (R=0.079)  charge=  7.1104  magn=  1.5277
+     atom 106 (R=0.079)  charge=  7.1336  magn=  1.4233
+     atom 107 (R=0.088)  charge= 12.1094  magn=  3.8648
+     atom 108 (R=0.079)  charge=  7.0810  magn=  1.6242
+     atom 109 (R=0.079)  charge=  7.1248  magn=  1.4953
+     atom 110 (R=0.079)  charge=  7.1205  magn=  1.4959
+     atom 111 (R=0.079)  charge=  7.1154  magn=  1.5100
+     atom 112 (R=0.088)  charge= 12.0930  magn=  3.7743
+     atom 113 (R=0.088)  charge= 12.1219  magn=  3.9077
+     atom 114 (R=0.079)  charge=  7.1314  magn=  1.4320
+     atom 115 (R=0.079)  charge=  7.1254  magn=  1.4877
+     atom 116 (R=0.079)  charge=  7.1267  magn=  1.4854
+     atom 117 (R=0.066)  charge=  0.8174  magn=  0.0062
+     atom 118 (R=0.066)  charge=  0.8188  magn=  0.0066
+     atom 119 (R=0.066)  charge=  0.8209  magn=  0.0069
+     atom 120 (R=0.066)  charge=  0.8179  magn=  0.0072
+     atom 121 (R=0.043)  charge=  1.9690  magn=  0.0802
+     atom 122 (R=0.043)  charge=  1.9699  magn=  0.0752
+     atom 123 (R=0.043)  charge=  1.9695  magn=  0.0644
+     atom 124 (R=0.043)  charge=  1.9741  magn=  0.0520
+     atom 125 (R=0.043)  charge=  1.9702  magn=  0.0310
+     atom 126 (R=0.043)  charge=  1.9740  magn=  0.0513
+     atom 127 (R=0.043)  charge=  1.9760  magn=  0.0481
+     atom 128 (R=0.043)  charge=  1.9677  magn=  0.0476
+     atom 129 (R=0.043)  charge=  1.9723  magn=  0.0421
+     atom 130 (R=0.043)  charge=  1.9722  magn=  0.0545
+     atom 131 (R=0.043)  charge=  1.9702  magn=  0.0534
+     atom 132 (R=0.043)  charge=  1.9764  magn=  0.0355
+     atom 133 (R=0.043)  charge=  1.9732  magn=  0.0444
+     atom 134 (R=0.043)  charge=  1.9761  magn=  0.0448
+     atom 135 (R=0.043)  charge=  1.9724  magn=  0.0599
+     atom 136 (R=0.043)  charge=  1.9743  magn=  0.0445
+     atom 137 (R=0.066)  charge=  0.8178  magn=  0.0050
+     atom 138 (R=0.066)  charge=  0.8215  magn=  0.0090
+     atom 139 (R=0.066)  charge=  0.8216  magn=  0.0071
+     atom 140 (R=0.066)  charge=  0.8179  magn=  0.0046
+     atom 141 (R=0.043)  charge=  1.9658  magn=  0.0945
+     atom 142 (R=0.043)  charge=  1.9712  magn=  0.0500
+     atom 143 (R=0.043)  charge=  1.9734  magn=  0.0658
+     atom 144 (R=0.043)  charge=  1.9700  magn=  0.0793
+     atom 145 (R=0.043)  charge=  1.9664  magn=  0.0413
+     atom 146 (R=0.043)  charge=  1.9795  magn=  0.0415
+     atom 147 (R=0.043)  charge=  1.9756  magn=  0.0436
+     atom 148 (R=0.043)  charge=  1.9672  magn=  0.0367
+     atom 149 (R=0.043)  charge=  1.9689  magn=  0.0544
+     atom 150 (R=0.043)  charge=  1.9721  magn=  0.0518
+     atom 151 (R=0.043)  charge=  1.9716  magn=  0.0489
+     atom 152 (R=0.043)  charge=  1.9773  magn=  0.0337
+     atom 153 (R=0.043)  charge=  1.9742  magn=  0.0466
+     atom 154 (R=0.043)  charge=  1.9754  magn=  0.0369
+     atom 155 (R=0.043)  charge=  1.9710  magn=  0.0476
+     atom 156 (R=0.043)  charge=  1.9730  magn=  0.0363
+     atom 157 (R=0.043)  charge=  1.9561  magn=  0.1881
+     atom 158 (R=0.043)  charge=  0.3976  magn= -0.0014
+
+     total cpu time spent up to now is     1427.7 secs
+
+     End of self-consistent calculation
+
+ ------ SPIN UP ------------
+
+
+          k = 0.0000 0.0000 0.0000 ( 62606 PWs)   bands (ev):
+
+   -80.1655 -79.8605 -79.7668 -79.6996 -79.5355 -79.5290 -79.5100 -79.4949
+   -79.3889 -48.9798 -48.8783 -48.8639 -48.7509 -48.6677 -48.5621 -48.5303
+   -48.5030 -48.4686 -48.4605 -48.4352 -48.3967 -48.3388 -48.3308 -48.3173
+   -48.3054 -48.3046 -48.3016 -48.2766 -48.2661 -48.2441 -48.2438 -48.2175
+   -48.2148 -48.2048 -48.1536 -48.1158 -21.3278 -21.1874 -21.1459 -21.1225
+   -21.1062 -21.0559 -21.0391 -21.0014 -20.9761 -20.9728 -20.9361 -20.9257
+   -20.8646 -20.8590 -20.7774 -20.7407 -20.5959 -20.5901 -20.5418 -20.5357
+   -20.4796 -20.4721 -20.4258 -20.4258 -18.9460 -18.8649 -18.8443 -18.8339
+   -18.8198 -18.7680 -18.7388 -18.7277 -18.7146 -18.7047 -18.6853 -18.6485
+   -18.6344 -18.6247 -18.6176 -18.6155 -18.6009 -18.5928 -18.5734 -18.5552
+   -18.5436 -18.5384 -18.5330 -18.5276 -18.5159 -18.5034 -18.4936 -18.4900
+   -18.4838 -18.4759 -18.4613 -18.4457 -18.4416 -18.4363 -18.4202 -18.4121
+   -18.3940 -18.3865 -18.3803 -18.3673 -18.3553 -18.3477 -18.3357 -18.3208
+   -18.3155 -18.3112 -18.3021 -18.2794 -18.2643 -18.2550 -18.2476 -18.2423
+   -18.2396 -18.2241 -18.2040 -18.1691 -18.1487 -18.1314 -18.1124 -18.0609
+   -18.0560 -18.0396 -18.0206 -17.9481 -17.7670 -17.7485 -17.6960 -17.6499
+   -17.2851 -17.2753 -17.1999 -17.0833 -16.9818  -8.7545  -8.5536  -8.4527
+    -8.3939  -8.3629  -8.3573  -8.3259  -8.3085  -8.2857  -8.2746  -8.2450
+    -8.2078  -8.1908  -8.1580  -8.1148  -8.0967  -7.9663  -7.8570  -7.8334
+    -7.8135  -7.7717  -7.6957  -7.6810  -7.6527  -7.3026  -7.0567  -6.9715
+    -6.9440  -6.8026  -6.7441  -6.7287  -6.6437  -6.5149  -6.4796  -6.4576
+    -6.4517  -6.4167  -6.4063  -6.3857  -6.3689  -6.3305  -6.2963  -6.2684
+    -6.2396  -6.2304  -6.2203  -6.1903  -6.1425  -6.1253  -6.1131  -6.1017
+    -6.0827  -6.0768  -6.0699  -6.0354  -6.0172  -6.0002  -5.9310  -5.9259
+    -5.9132  -5.8971  -5.8811  -5.8708  -5.8514  -5.8328  -5.8019  -5.7864
+    -5.7787  -5.7520  -5.7481  -5.7403  -5.7137  -5.7021  -5.6942  -5.6217
+    -5.5907  -5.5592  -5.5101  -5.5041  -5.4907  -5.4731  -5.4638  -5.3997
+    -5.3802  -5.3471  -5.3086  -5.2967  -5.2811  -5.2474  -5.2296  -5.1973
+    -5.1722  -5.1301  -5.1074  -5.0892  -5.0710  -5.0477  -5.0434  -5.0238
+    -4.9346  -4.9211  -4.9183  -4.8372  -4.8157  -4.7862  -4.7738  -4.7715
+    -4.7415  -4.7170  -4.6918  -4.6556  -4.6225  -4.6147  -4.5945  -4.5650
+    -4.5574  -4.5439  -4.5095  -4.4876  -4.4510  -4.3750  -4.3332  -4.3130
+    -4.2465  -4.2391  -4.2343  -4.2135  -4.2049  -4.1942  -4.1910  -4.1688
+    -4.1442  -4.1397  -4.0760  -4.0614  -4.0400  -4.0276  -4.0111  -3.9884
+    -3.9675  -3.9555  -3.9410  -3.9274  -3.9114  -3.8746  -3.8601  -3.8513
+    -3.8345  -3.8207  -3.8110  -3.7966  -3.7691  -3.7554  -3.7488  -3.7366
+    -3.6935  -3.6743  -3.6468  -3.6223  -3.6056  -3.5945  -3.5880  -3.5713
+    -3.5688  -3.5424  -3.5336  -3.4994  -3.4647  -3.4565  -3.4505  -3.4121
+    -3.4053  -3.3907  -3.3756  -3.3503  -3.3478  -3.3403  -3.3288  -3.3274
+    -3.2908  -3.2873  -3.2649  -3.2538  -3.2449  -3.2261  -3.2040  -3.1647
+    -3.1560  -3.1373  -3.1260  -3.0996  -3.0964  -3.0802  -3.0733  -3.0521
+    -3.0471  -3.0368  -3.0099  -3.0064  -2.9799  -2.9500  -2.9303  -2.9216
+    -2.8902  -2.8867  -2.8646  -2.8459  -2.8272  -2.7954  -2.7784  -2.7632
+    -2.7510  -2.7129  -2.6685  -2.6593  -2.6422  -2.6164  -2.5905  -2.5752
+    -2.5472  -2.5255  -2.5138  -2.5070  -2.4711  -2.4659  -2.4420  -2.4297
+    -2.4195  -2.3786  -2.3569  -2.3510  -2.3250  -2.3133  -2.3036  -2.2901
+    -2.2842  -2.2559  -2.2460  -2.2165  -2.2042  -2.1701  -2.1619  -2.1570
+    -2.1279  -2.0981  -2.0860  -2.0695  -2.0607  -2.0515  -2.0365  -2.0248
+    -2.0058  -1.9812  -1.9682  -1.9586  -1.9231  -1.9134  -1.9088  -1.8849
+    -1.8500  -1.8325  -1.8277  -1.8043  -1.7967  -1.7714  -1.7611  -1.7400
+    -1.7332  -1.7206  -1.6949  -1.6781  -1.6399  -1.6300  -1.6125  -1.5933
+    -1.5772  -1.5628  -1.5444  -1.5335  -1.4752  -1.4276  -1.4105  -1.3892
+    -1.2315  -1.1907  -1.1581  -1.0993  -1.0647  -1.0011  -0.9990  -0.9622
+    -0.9375  -0.9324  -0.9245  -0.9174  -0.9147  -0.8984  -0.8941  -0.8768
+    -0.8568  -0.8485  -0.8397  -0.8234  -0.8175  -0.8132  -0.8109  -0.7977
+    -0.7945  -0.7907  -0.7873  -0.7744  -0.7655  -0.7589  -0.7504  -0.7349
+    -0.7279  -0.7249  -0.7167  -0.7073  -0.6887  -0.6836  -0.6759  -0.6742
+    -0.6695  -0.6586  -0.6556  -0.6524  -0.6438  -0.6323  -0.6290  -0.6192
+    -0.6173  -0.6021  -0.5913  -0.5857  -0.5807  -0.5559  -0.5491  -0.5446
+    -0.5326  -0.5299  -0.5262  -0.5209  -0.5050  -0.4981  -0.4906  -0.4833
+    -0.4796  -0.4654  -0.4576  -0.4439  -0.4378  -0.4213  -0.4115  -0.4045
+    -0.3890  -0.3829  -0.3719  -0.3593  -0.3543  -0.3502  -0.3450  -0.3380
+    -0.3282  -0.3098  -0.3084  -0.3025  -0.2926  -0.2810  -0.2696  -0.2662
+    -0.2624  -0.2553  -0.2407  -0.2336  -0.2173  -0.2122  -0.2023  -0.1990
+    -0.1797  -0.1618  -0.1469  -0.1352  -0.1307  -0.1253  -0.1174  -0.1111
+    -0.0997  -0.0880  -0.0842  -0.0676  -0.0593  -0.0465  -0.0326  -0.0131
+    -0.0057   0.0073   0.0141   0.0280   0.0467   0.0622   0.0737   0.0773
+     0.0885   0.0984   0.1184   0.1329   0.1594   0.1701   0.1790   0.1931
+     0.2049   0.2175   0.2376   0.2508   0.2557   0.2686   0.2767   0.3053
+     0.3170   0.3280   0.3668   0.3882   0.3928   0.4114   0.4276   0.4399
+     0.4486   0.4550   0.4781   0.4875   0.4938   0.5071   0.5178   0.5377
+     0.5486   0.5892   0.6038   0.6167   0.6469   0.6755   0.6981   0.7018
+     0.7091   0.7261   0.7301   0.7718   0.7975   0.8360   0.8868   0.9030
+     0.9150   1.0099   1.0184   1.0767   1.0957   1.1444   1.1586   1.1767
+     1.2563   1.2760   1.3522   1.4069   1.4653   1.4973   1.5221   1.5441
+     1.6106   1.6155   1.6336   1.7172   4.1388   4.4169   4.9150   5.4816
+     5.6770   5.8972   6.1158   6.2051   6.2267   6.3297   6.4437   6.4780
+     6.6154   6.6466   6.6891   6.7096   6.9491   6.9969   7.0697   7.0965
+     7.1142   7.1551   7.1889   7.3048   7.3472   7.4064   7.4680   7.5104
+     7.5336   7.5594   7.6002   7.6370   7.6918   7.7471   7.7632   7.7972
+     7.8167   7.8421   7.8633   7.8901   7.9260   7.9692   8.0047   8.0429
+     8.0607   8.0906   8.1037   8.1358   8.1473   8.1608   8.1940   8.1970
+     8.2339   8.2439   8.2757   8.2875   8.2905   8.2980   8.3278   8.3679
+     8.3943
+
+ ------ SPIN DOWN ----------
+
+
+          k = 0.0000 0.0000 0.0000 ( 62606 PWs)   bands (ev):
+
+   -75.2508 -74.7201 -74.6695 -74.5993 -74.4599 -74.4297 -74.4202 -74.3716
+   -74.2395 -44.1540 -44.0828 -44.0773 -43.7396 -43.6459 -43.6441 -43.5441
+   -43.5128 -43.5020 -43.4294 -43.4209 -43.3921 -43.3840 -43.3710 -43.3530
+   -43.3204 -43.3021 -43.3012 -43.2823 -43.2685 -43.2543 -43.2484 -43.2448
+   -43.2051 -43.1699 -43.1222 -43.0825 -21.1695 -21.0331 -20.9899 -20.9712
+   -20.9459 -20.8982 -20.8807 -20.8440 -20.8188 -20.8145 -20.7813 -20.7623
+   -20.7048 -20.6992 -20.6193 -20.5834 -20.4312 -20.4279 -20.3842 -20.3765
+   -20.3150 -20.3108 -20.2717 -20.2575 -18.7593 -18.6876 -18.6612 -18.6464
+   -18.6410 -18.5888 -18.5604 -18.5490 -18.5379 -18.5317 -18.4829 -18.4699
+   -18.4476 -18.4435 -18.4291 -18.4187 -18.4134 -18.4021 -18.3854 -18.3714
+   -18.3614 -18.3549 -18.3435 -18.3314 -18.3285 -18.3164 -18.3128 -18.3035
+   -18.2896 -18.2813 -18.2717 -18.2624 -18.2556 -18.2525 -18.2387 -18.2313
+   -18.2021 -18.1975 -18.1808 -18.1726 -18.1688 -18.1521 -18.1387 -18.1311
+   -18.1204 -18.1138 -18.0921 -18.0835 -18.0684 -18.0540 -18.0473 -18.0333
+   -18.0271 -18.0091 -17.9895 -17.9753 -17.9449 -17.9148 -17.9098 -17.8721
+   -17.8486 -17.8261 -17.8124 -17.7459 -17.5773 -17.5654 -17.5066 -17.4628
+   -17.1343 -17.1225 -17.0175 -16.9098 -16.2523  -8.5723  -8.3705  -8.2658
+    -8.1994  -8.1745  -8.1676  -8.1183  -8.1099  -8.0871  -8.0696  -8.0319
+    -8.0177  -8.0023  -7.9473  -7.9306  -7.8882  -7.7722  -7.6693  -7.6495
+    -7.6114  -7.5842  -7.5233  -7.5055  -7.4362  -7.0543  -6.8156  -6.7431
+    -6.6944  -6.5741  -6.5049  -6.4925  -6.3732  -6.2875  -6.2385  -6.2009
+    -6.1919  -6.1815  -6.1738  -6.1249  -6.1112  -6.0713  -6.0623  -6.0292
+    -5.9989  -5.9900  -5.9776  -5.9538  -5.9100  -5.8988  -5.8666  -5.8453
+    -5.8396  -5.8286  -5.8230  -5.7769  -5.7651  -5.7609  -5.6957  -5.6800
+    -5.6735  -5.6517  -5.6264  -5.6146  -5.5907  -5.5813  -5.5667  -5.5448
+    -5.5425  -5.5163  -5.5059  -5.5036  -5.4836  -5.4793  -5.4605  -5.3767
+    -5.3580  -5.3271  -5.2807  -5.2611  -5.2526  -5.2466  -5.2319  -5.1653
+    -5.1552  -5.1162  -5.0774  -5.0503  -5.0425  -4.9969  -4.9267  -4.9040
+    -4.8712  -4.8565  -4.8113  -4.8032  -4.7852  -4.7799  -4.7471  -4.7373
+    -4.6617  -4.6402  -4.6016  -4.5791  -4.5515  -4.4788  -4.4484  -4.4096
+    -4.3956  -4.3817  -4.3154  -4.2930  -4.2867  -4.2426  -4.2213  -4.2063
+    -4.1751  -4.1507  -4.1131  -4.0673  -4.0611  -4.0110  -3.9812  -3.9711
+    -3.8970  -3.8678  -3.8547  -3.8437  -3.8131  -3.7634  -3.7479  -3.7418
+    -3.7202  -3.7147  -3.6791  -3.6773  -3.6225  -3.6201  -3.6029  -3.5918
+    -3.5437  -3.5373  -3.5301  -3.5144  -3.5021  -3.4857  -3.4724  -3.4319
+    -3.4193  -3.4157  -3.3883  -3.3791  -3.3690  -3.3482  -3.3325  -3.3239
+    -3.2935  -3.2845  -3.2785  -3.2600  -3.2169  -3.1997  -3.1851  -3.1589
+    -3.1434  -3.1008  -3.0953  -3.0756  -3.0560  -3.0377  -3.0313  -3.0038
+    -2.9793  -2.9470  -2.9420  -2.9129  -2.8874  -2.8621  -2.8561  -2.8282
+    -2.8157  -2.7820  -2.7408  -2.7181  -2.7097  -2.6945  -2.6895  -2.6891
+    -2.6748  -2.6599  -2.6440  -2.6312  -2.6264  -2.6116  -2.5930  -2.5841
+    -2.5621  -2.5492  -2.5240  -2.5203  -2.5122  -2.5013  -2.4740  -2.4680
+    -2.4371  -2.4220  -2.4050  -2.3939  -2.3754  -2.3519  -2.3441  -2.3196
+    -2.3023  -2.2906  -2.2801  -2.2693  -2.2344  -2.2064  -2.1933  -2.1865
+    -2.1618  -2.1529  -2.1363  -2.0903  -2.0891  -2.0693  -2.0465  -2.0279
+    -2.0167  -2.0054  -1.9855  -1.9688  -1.9652  -1.9378  -1.9084  -1.8855
+    -1.8769  -1.8665  -1.8578  -1.8362  -1.8264  -1.8195  -1.8078  -1.7956
+    -1.7298  -1.6937  -1.6831  -1.6770  -1.6550  -1.6302  -1.6265  -1.6107
+    -1.6049  -1.5853  -1.5787  -1.5382  -1.5353  -1.5173  -1.4936  -1.4512
+    -1.4440  -1.4335  -1.4095  -1.3814  -1.3758  -1.3505  -1.3422  -1.3243
+    -1.3133  -1.3023  -1.2592  -1.2186  -1.1785  -1.1718  -1.1487  -1.1127
+    -1.0701  -1.0403  -1.0048  -1.0013  -0.9929  -0.8882  -0.8419  -0.7992
+    -0.7678  -0.6411  -0.6262  -0.6139  -0.4558  -0.4132  -0.2748  -0.2174
+     0.1790   0.1935   0.2355   0.2591   0.2664   0.2910   0.2975   0.3069
+     0.3165   0.3284   0.3409   0.3687   0.3706   0.3820   0.3903   0.4040
+     0.4090   0.4131   0.4229   0.4327   0.4378   0.4452   0.4673   0.4698
+     0.4780   0.4816   0.4917   0.4952   0.5077   0.5153   0.5182   0.5276
+     0.5357   0.5421   0.5538   0.5566   0.5632   0.5701   0.5829   0.5916
+     0.6071   0.6124   0.6217   0.6348   0.6408   0.6452   0.6546   0.6603
+     0.6661   0.6799   0.7026   0.7104   0.7209   0.7290   0.7333   0.7413
+     0.7478   0.7720   0.7829   0.7915   0.7959   0.8102   0.8109   0.8220
+     0.8281   0.8474   0.8501   0.8638   0.8742   0.8765   0.8816   0.9015
+     0.9082   0.9691   0.9819   0.9954   1.0285   1.1073   1.1317   1.1510
+     1.6960   1.7606   1.7745   1.7834   1.7975   1.8242   1.8389   1.8669
+     1.8769   1.9052   1.9380   1.9550   1.9707   1.9911   2.0143   2.0207
+     2.0539   2.0769   2.0831   2.0990   2.1039   2.1238   2.1399   2.1592
+     2.1886   2.2031   2.2055   2.2161   2.2270   2.2594   2.2667   2.2803
+     2.2860   2.2978   2.3054   2.3461   2.3640   2.3684   2.4034   2.4317
+     2.4579   2.4615   2.4856   2.5089   2.5173   2.5259   2.5651   2.6056
+     2.6197   2.6609   2.7285   2.7713   2.8043   2.8631   2.8867   3.4331
+     3.5031   3.6756   3.6959   3.7345   3.7593   3.7887   3.8198   3.8521
+     3.8866   3.9445   3.9501   3.9537   3.9897   3.9969   4.0068   4.0245
+     4.0466   4.0770   4.0914   4.1068   4.1363   4.1515   4.1601   4.1997
+     4.2066   4.2175   4.2517   4.2669   4.3063   4.5965   4.6019   4.7476
+     4.7886   4.8471   4.8912   4.9174   4.9583   4.9885   4.9955   5.0510
+     5.0749   5.0900   5.1541   5.1715   5.2145   5.2206   5.3860   6.1783
+     6.3586   6.4415   6.5804   6.6538   6.7164   6.7356   6.8486   6.9046
+     6.9391   6.9573   7.0023   7.1063   7.2192   7.2696   7.3230   7.3640
+     7.3877   7.4119   7.4749   7.5094   7.5681   7.5865   7.7005   7.7255
+     7.7686   7.8680   7.8994   7.9215   7.9529   7.9926   8.0140   8.0424
+     8.0739   8.0964   8.1241   8.1622   8.1682   8.2132   8.2383   8.3021
+     8.3217   8.3321   8.3519   8.3707   8.3835   8.4079   8.4341   8.4427
+     8.4669   8.4875   8.5041   8.5448   8.5599   8.5826   8.6222   8.6317
+     8.6767
+
+     the Fermi energy is     1.6909 ev
+
+!    total energy              =   -8078.56150569 Ry
+     estimated scf accuracy    <       0.00000051 Ry
+     smearing contrib. (-TS)   =      -0.02485412 Ry
+     internal energy E=F+TS    =   -8078.53665157 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =  -94704.61462466 Ry
+     hartree contribution      =   47936.83328210 Ry
+     xc contribution           =   -2177.36186190 Ry
+     ewald contribution        =   40868.37672292 Ry
+     Dispersion Correction     =      -1.77018246 Ry
+     electric field correction =       0.00001242 Ry
+
+     total magnetization       =    97.12 Bohr mag/cell
+     absolute magnetization    =    98.34 Bohr mag/cell
+
+     convergence has been achieved in 101 iterations
+
+     negative rho (up, down):  1.166E-03 6.277E-04
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.02429722   -0.01757267    0.02015538
+     atom    2 type  1   force =    -0.00194435    0.00038571   -0.00545386
+     atom    3 type  2   force =    -0.03030846   -0.01582272   -0.00847973
+     atom    4 type  1   force =     0.00187820   -0.00353651   -0.00451924
+     atom    5 type  1   force =    -0.00379303    0.00224824   -0.00177558
+     atom    6 type  1   force =     0.00254523    0.00746634   -0.00421791
+     atom    7 type  1   force =     0.03198548   -0.01942390    0.01795332
+     atom    8 type  2   force =    -0.00185826    0.00040934   -0.00897903
+     atom    9 type  2   force =    -0.02890375   -0.01542230   -0.00843718
+     atom   10 type  1   force =     0.00192511   -0.00330106   -0.00432382
+     atom   11 type  1   force =    -0.00339271    0.00261634   -0.00090527
+     atom   12 type  1   force =     0.00359452    0.00684739   -0.00368994
+     atom   13 type  3   force =     0.00213934    0.00064588   -0.00760802
+     atom   14 type  3   force =    -0.02976595    0.04992265   -0.06596795
+     atom   15 type  3   force =     0.03461914    0.03755535   -0.05988730
+     atom   16 type  3   force =    -0.00446338    0.00316398   -0.00092286
+     atom   17 type  4   force =    -0.00199526    0.00139544    0.00285053
+     atom   18 type  4   force =    -0.00160430   -0.00516160    0.02738805
+     atom   19 type  4   force =     0.00395991    0.00282349    0.02953313
+     atom   20 type  4   force =     0.00017593   -0.00283870   -0.00477080
+     atom   21 type  4   force =    -0.00300685   -0.00223851    0.00331386
+     atom   22 type  4   force =     0.00472714   -0.00327253    0.03416821
+     atom   23 type  4   force =    -0.00597141   -0.00107822    0.03248024
+     atom   24 type  4   force =     0.00069802   -0.00100465   -0.00000940
+     atom   25 type  4   force =    -0.00132406    0.00078766    0.00219931
+     atom   26 type  4   force =    -0.01451817   -0.02267687   -0.00179815
+     atom   27 type  4   force =     0.00173245   -0.00075245    0.00122910
+     atom   28 type  4   force =    -0.01763132    0.00341243    0.00122225
+     atom   29 type  4   force =     0.02071417   -0.00460016    0.00829049
+     atom   30 type  4   force =     0.01239498   -0.03413810    0.00113556
+     atom   31 type  4   force =     0.00054714    0.00097181    0.00233035
+     atom   32 type  4   force =    -0.00218305    0.00008289    0.00267764
+     atom   33 type  3   force =    -0.00053551   -0.00163697   -0.00507954
+     atom   34 type  3   force =    -0.03024989    0.05983797   -0.08314942
+     atom   35 type  3   force =     0.03460509    0.03340965   -0.05927193
+     atom   36 type  3   force =    -0.00378384    0.00471012   -0.00076454
+     atom   37 type  4   force =    -0.00107989    0.00136934    0.00309831
+     atom   38 type  4   force =    -0.00306446   -0.00556035    0.03296591
+     atom   39 type  4   force =     0.00441980    0.00391503    0.02923786
+     atom   40 type  4   force =     0.00018541   -0.00324079   -0.00491616
+     atom   41 type  4   force =    -0.00003470    0.00009161    0.00353713
+     atom   42 type  4   force =     0.00542541    0.00029605    0.01989453
+     atom   43 type  4   force =    -0.00178369    0.00038747    0.03452580
+     atom   44 type  4   force =     0.00087185   -0.00084340    0.00006968
+     atom   45 type  4   force =    -0.00021675   -0.00271361    0.00131283
+     atom   46 type  4   force =    -0.01510238   -0.02035667   -0.00046257
+     atom   47 type  4   force =     0.00191212   -0.00061142    0.00128947
+     atom   48 type  4   force =    -0.01800276    0.00403702    0.00164724
+     atom   49 type  4   force =     0.01649920   -0.00278142    0.00500344
+     atom   50 type  4   force =     0.01178644   -0.03683635    0.00436501
+     atom   51 type  4   force =     0.00107187    0.00089206    0.00172362
+     atom   52 type  4   force =     0.00092760   -0.00221708    0.00364203
+     atom   53 type  1   force =     0.00153367    0.00058994   -0.00064567
+     atom   54 type  1   force =     0.00119555    0.00033348    0.00025650
+     atom   55 type  2   force =     0.00012637   -0.00042328    0.00001497
+     atom   56 type  1   force =    -0.00006088   -0.00050000    0.00168518
+     atom   57 type  1   force =     0.00057434    0.00018684    0.00051219
+     atom   58 type  1   force =     0.00025487   -0.00053516    0.00042496
+     atom   59 type  1   force =     0.00037892    0.00091549   -0.00088461
+     atom   60 type  2   force =    -0.00124449   -0.00126718    0.00612095
+     atom   61 type  2   force =    -0.00054583   -0.00039313   -0.00021661
+     atom   62 type  1   force =     0.00010342    0.00148125    0.00116912
+     atom   63 type  1   force =    -0.00059614    0.00042926    0.00030678
+     atom   64 type  1   force =     0.00013792   -0.00043352    0.00003385
+     atom   65 type  3   force =    -0.00024718    0.00195799    0.00209672
+     atom   66 type  3   force =    -0.00003339   -0.00026767   -0.00171788
+     atom   67 type  3   force =     0.00037966    0.00073595   -0.00066232
+     atom   68 type  3   force =    -0.00049184   -0.00200002    0.00210134
+     atom   69 type  4   force =    -0.00087458    0.00004530   -0.00079020
+     atom   70 type  4   force =    -0.00007128    0.00012080    0.00033771
+     atom   71 type  4   force =     0.00016453   -0.00045719   -0.00017966
+     atom   72 type  4   force =    -0.00069213    0.00081061   -0.00177382
+     atom   73 type  4   force =     0.00159953    0.00012573    0.00047606
+     atom   74 type  4   force =    -0.00016569   -0.00065809    0.00192539
+     atom   75 type  4   force =    -0.00000302    0.00008069    0.00029886
+     atom   76 type  4   force =    -0.00100839   -0.00057632    0.00027207
+     atom   77 type  4   force =    -0.00116146    0.00114908    0.00005909
+     atom   78 type  4   force =    -0.00034321    0.00003326    0.00034238
+     atom   79 type  4   force =     0.00108864    0.00170290   -0.00178208
+     atom   80 type  4   force =     0.00012100    0.00059364    0.00013082
+     atom   81 type  4   force =    -0.00050104   -0.00020652    0.00036453
+     atom   82 type  4   force =     0.00030189   -0.00002125    0.00002428
+     atom   83 type  4   force =     0.00049198   -0.00087370   -0.00034202
+     atom   84 type  4   force =    -0.00045187   -0.00038681   -0.00043154
+     atom   85 type  3   force =     0.00051808    0.00041795    0.00011959
+     atom   86 type  3   force =     0.00067741   -0.00067346   -0.00065351
+     atom   87 type  3   force =    -0.00017193   -0.00004935   -0.00102766
+     atom   88 type  3   force =    -0.00198788   -0.00170060    0.00163552
+     atom   89 type  4   force =     0.00002288    0.00003890    0.00018860
+     atom   90 type  4   force =     0.00007055   -0.00046747    0.00174650
+     atom   91 type  4   force =     0.00015928   -0.00001738    0.00028150
+     atom   92 type  4   force =     0.00053347   -0.00058493   -0.00122138
+     atom   93 type  4   force =     0.00125868    0.00036776    0.00061930
+     atom   94 type  4   force =    -0.00026593    0.00003849    0.00145605
+     atom   95 type  4   force =     0.00020116    0.00012858    0.00058135
+     atom   96 type  4   force =    -0.00115256   -0.00069015    0.00158006
+     atom   97 type  4   force =     0.00056505    0.00018907   -0.00070173
+     atom   98 type  4   force =    -0.00068647   -0.00006985    0.00035835
+     atom   99 type  4   force =     0.00030009    0.00117624   -0.00165912
+     atom  100 type  4   force =     0.00060142    0.00040630    0.00054097
+     atom  101 type  4   force =    -0.00036629   -0.00015230    0.00057168
+     atom  102 type  4   force =     0.00082591   -0.00027366    0.00040019
+     atom  103 type  4   force =     0.00152853   -0.00001406    0.00108544
+     atom  104 type  4   force =    -0.00082747   -0.00083037    0.00031030
+     atom  105 type  1   force =    -0.00014417    0.00000801   -0.00025335
+     atom  106 type  1   force =     0.00058655   -0.00002020   -0.00030808
+     atom  107 type  2   force =     0.00009747    0.00030024    0.00036708
+     atom  108 type  1   force =    -0.00062328   -0.00083790   -0.00016501
+     atom  109 type  1   force =    -0.00015535   -0.00033650   -0.00019576
+     atom  110 type  1   force =    -0.00041706    0.00026209   -0.00043903
+     atom  111 type  1   force =     0.00002698   -0.00037275    0.00003594
+     atom  112 type  2   force =     0.00013367    0.00053217   -0.00022137
+     atom  113 type  2   force =     0.00026894    0.00018141   -0.00034418
+     atom  114 type  1   force =    -0.00016320    0.00011002   -0.00008371
+     atom  115 type  1   force =     0.00038696    0.00047595   -0.00058587
+     atom  116 type  1   force =     0.00009709    0.00018407   -0.00022304
+     atom  117 type  3   force =    -0.00061737   -0.00004429    0.00025878
+     atom  118 type  3   force =    -0.00051523    0.00013264    0.00019255
+     atom  119 type  3   force =    -0.00018038   -0.00009493   -0.00029226
+     atom  120 type  3   force =     0.00016917    0.00028484   -0.00041956
+     atom  121 type  4   force =     0.00040352   -0.00009710    0.00034646
+     atom  122 type  4   force =    -0.00028968    0.00014893    0.00020797
+     atom  123 type  4   force =    -0.00011870    0.00006385   -0.00003908
+     atom  124 type  4   force =     0.00000805   -0.00053052   -0.00012276
+     atom  125 type  4   force =     0.00068981    0.00018826    0.00023854
+     atom  126 type  4   force =    -0.00000736   -0.00044979    0.00013050
+     atom  127 type  4   force =     0.00021881    0.00008522   -0.00012456
+     atom  128 type  4   force =    -0.00005518    0.00028579   -0.00023400
+     atom  129 type  4   force =     0.00015812    0.00008590    0.00018271
+     atom  130 type  4   force =    -0.00011002    0.00002750    0.00022916
+     atom  131 type  4   force =    -0.00011576   -0.00035092    0.00025690
+     atom  132 type  4   force =     0.00033241    0.00020350    0.00017923
+     atom  133 type  4   force =    -0.00031094    0.00002206    0.00020193
+     atom  134 type  4   force =    -0.00012893    0.00028623   -0.00011263
+     atom  135 type  4   force =     0.00003921    0.00068956    0.00004298
+     atom  136 type  4   force =    -0.00048876   -0.00010824    0.00013139
+     atom  137 type  3   force =    -0.00000251   -0.00007276    0.00004836
+     atom  138 type  3   force =    -0.00031288    0.00014495    0.00026489
+     atom  139 type  3   force =     0.00004346   -0.00023113   -0.00003092
+     atom  140 type  3   force =    -0.00006888   -0.00007251   -0.00010444
+     atom  141 type  4   force =     0.00017099   -0.00016667    0.00026330
+     atom  142 type  4   force =     0.00008538    0.00010511    0.00037227
+     atom  143 type  4   force =    -0.00002459    0.00001285   -0.00024759
+     atom  144 type  4   force =     0.00017950   -0.00037495   -0.00060326
+     atom  145 type  4   force =    -0.00011407   -0.00040913   -0.00028230
+     atom  146 type  4   force =    -0.00014326   -0.00020242    0.00023051
+     atom  147 type  4   force =     0.00019160   -0.00031634    0.00013755
+     atom  148 type  4   force =    -0.00061424    0.00006176   -0.00019627
+     atom  149 type  4   force =     0.00084122    0.00014207    0.00017113
+     atom  150 type  4   force =     0.00008237   -0.00014559   -0.00021475
+     atom  151 type  4   force =     0.00001666   -0.00022019    0.00044079
+     atom  152 type  4   force =     0.00001104   -0.00017335    0.00008373
+     atom  153 type  4   force =     0.00001390    0.00030114   -0.00009046
+     atom  154 type  4   force =    -0.00013144    0.00021510    0.00021840
+     atom  155 type  4   force =     0.00007701   -0.00013165   -0.00002303
+     atom  156 type  4   force =     0.00002604    0.00009949    0.00002670
+     atom  157 type  4   force =    -0.00331982   -0.00189168   -0.00075038
+     atom  158 type  5   force =     0.00293264    0.00243655    0.00185852
+
+     Total force =     0.225415     Total SCF correction =     0.002582
+ 
+     init_run     :      7.97s CPU      8.63s WALL (       1 calls)
+     electrons    :   1355.10s CPU   1415.89s WALL (       1 calls)
+     forces       :      4.41s CPU      4.71s WALL (       1 calls)
+     force_london :      0.09s CPU      0.09s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      4.58s CPU      4.74s WALL (       1 calls)
+     potinit      :      0.61s CPU      0.79s WALL (       1 calls)
+     hinit0       :      1.69s CPU      1.86s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :   1046.63s CPU   1077.90s WALL (     101 calls)
+     sum_band     :    191.77s CPU    206.06s WALL (     101 calls)
+     v_of_rho     :     25.16s CPU     29.22s WALL (     102 calls)
+     newd         :     62.84s CPU     73.76s WALL (     102 calls)
+     mix_rho      :     27.07s CPU     27.48s WALL (     101 calls)
+     energy_londo :      0.07s CPU      0.07s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      2.52s CPU      2.58s WALL (     408 calls)
+     init_us_2:cp :      2.51s CPU      2.58s WALL (     408 calls)
+     regterg      :   1025.91s CPU   1056.05s WALL (     202 calls)
+
+     Called by *egterg:
+     rdiaghg      :    237.52s CPU    252.29s WALL (     703 calls)
+     h_psi        :    401.21s CPU    408.57s WALL (     705 calls)
+     s_psi        :     60.11s CPU     60.15s WALL (     705 calls)
+     g_psi        :      0.43s CPU      0.44s WALL (     501 calls)
+
+     Called by h_psi:
+     h_psi:calbec :    105.72s CPU    111.61s WALL (     705 calls)
+     vloc_psi     :    231.08s CPU    231.86s WALL (     705 calls)
+     add_vuspsi   :     63.59s CPU     64.26s WALL (     705 calls)
+
+     General routines
+     calbec       :    157.51s CPU    166.31s WALL (     915 calls)
+     fft          :     44.45s CPU     49.28s WALL (    1849 calls)
+     ffts         :     16.52s CPU     16.56s WALL (   12605 calls)
+     fftw         :    265.42s CPU    266.28s WALL (  343722 calls)
+     interpolate  :      2.04s CPU      2.12s WALL (     204 calls)
+ 
+     Parallel routines
+ 
+     PWSCF        :  22m50.48s CPU  23m52.57s WALL
+
+ 
+   This run was terminated on:  21: 1:46  17Nov2025            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
