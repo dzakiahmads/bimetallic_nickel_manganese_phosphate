@@ -1,9 +1,9 @@
-# DFT Adsorption Study of Bimetallic Nickel Manganese Phosphate (NiMnPO)
+# Self-Templated Bimetallic Nickel-Manganese Phosphate with Rose-Like Nanoarchitecture Enabling Improved Supercapacitor Performance
 
 ## Overview
 This repository contains the complete dataset for Density Functional Theory (DFT) calculations of Bimetallic Nickel Manganese Phosphate (NiMnPO) with various Ni:Mn atomic ratios. The data includes optimized crystallographic structures, OH* adsorption configurations, and Zero-Point Energy (ZPE) raw data. 
 
-All calculations were performed using Quantum ESPRESSO.
+All calculations were performed using `Quantum ESPRESSO`.
 
 ## Investigated Ratios
 The structural models and calculation data are categorized by their Ni:Mn atomic ratios:
